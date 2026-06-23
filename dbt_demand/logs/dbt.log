@@ -1,0 +1,1564 @@
+[0m13:49:21.521964 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d7b9b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105fc3d40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105fc38f0>]}
+
+
+============================== 13:49:21.524449 | 080745b1-5dad-4d03-9244-2b0fdc493c96 ==============================
+[0m13:49:21.524449 [info ] [MainThread]: Running with dbt=1.11.11
+[0m13:49:21.524723 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'static_parser': 'True', 'cache_selected_only': 'False', 'printer_width': '80', 'log_cache_events': 'False', 'profiles_dir': '/Users/simishrivastava/.dbt', 'warn_error': 'None', 'debug': 'False', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'empty': 'None', 'log_format': 'default', 'target_path': 'None', 'use_colors': 'True', 'partial_parse': 'True', 'no_print': 'None', 'invocation_command': 'dbt debug --project-dir dbt_demand', 'quiet': 'False', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'log_path': 'dbt_demand/logs'}
+[0m13:49:21.532987 [info ] [MainThread]: dbt version: 1.11.11
+[0m13:49:21.533193 [info ] [MainThread]: python version: 3.12.7
+[0m13:49:21.533318 [info ] [MainThread]: python path: /Users/simishrivastava/Projects/causal-demand-forecasting/venv/bin/python3
+[0m13:49:21.533435 [info ] [MainThread]: os info: macOS-26.5-arm64-arm-64bit
+[0m13:49:22.168127 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m13:49:22.168371 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m13:49:22.168496 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m13:49:22.193043 [info ] [MainThread]: Using profiles dir at /Users/simishrivastava/.dbt
+[0m13:49:22.193240 [info ] [MainThread]: Using profiles.yml file at /Users/simishrivastava/.dbt/profiles.yml
+[0m13:49:22.193364 [info ] [MainThread]: Using dbt_project.yml file at dbt_demand/dbt_project.yml
+[0m13:49:22.193608 [info ] [MainThread]: adapter type: snowflake
+[0m13:49:22.193726 [info ] [MainThread]: adapter version: 1.11.5
+[0m13:49:22.230597 [info ] [MainThread]: Configuration:
+[0m13:49:22.230845 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m13:49:22.230977 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m13:49:22.231092 [info ] [MainThread]: Required dependencies:
+[0m13:49:22.231283 [debug] [MainThread]: Executing "git --help"
+[0m13:49:22.268281 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m13:49:22.268920 [debug] [MainThread]: STDERR: "b''"
+[0m13:49:22.269111 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m13:49:22.269264 [info ] [MainThread]: Connection:
+[0m13:49:22.269432 [info ] [MainThread]:   account: oplybsh-cs76807
+[0m13:49:22.269550 [info ] [MainThread]:   user: SimiShrivastava
+[0m13:49:22.269656 [info ] [MainThread]:   database: CAUSAL_DEMAND_DB
+[0m13:49:22.269763 [info ] [MainThread]:   warehouse: COMPUTE_WH
+[0m13:49:22.269864 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m13:49:22.269970 [info ] [MainThread]:   schema: ANALYTICS
+[0m13:49:22.270072 [info ] [MainThread]:   authenticator: None
+[0m13:49:22.270169 [info ] [MainThread]:   oauth_client_id: None
+[0m13:49:22.270269 [info ] [MainThread]:   query_tag: None
+[0m13:49:22.270371 [info ] [MainThread]:   client_session_keep_alive: False
+[0m13:49:22.270471 [info ] [MainThread]:   host: None
+[0m13:49:22.270571 [info ] [MainThread]:   port: None
+[0m13:49:22.270669 [info ] [MainThread]:   proxy_host: None
+[0m13:49:22.270770 [info ] [MainThread]:   proxy_port: None
+[0m13:49:22.270869 [info ] [MainThread]:   protocol: None
+[0m13:49:22.270965 [info ] [MainThread]:   connect_retries: 1
+[0m13:49:22.271060 [info ] [MainThread]:   connect_timeout: None
+[0m13:49:22.271206 [info ] [MainThread]:   retry_on_database_errors: False
+[0m13:49:22.271392 [info ] [MainThread]:   retry_all: False
+[0m13:49:22.271513 [info ] [MainThread]:   insecure_mode: False
+[0m13:49:22.271705 [info ] [MainThread]:   reuse_connections: True
+[0m13:49:22.271860 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m13:49:22.271982 [info ] [MainThread]:   platform_detection_timeout_seconds: 0.0
+[0m13:49:22.272330 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m13:49:22.337798 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m13:49:22.378257 [debug] [MainThread]: Using snowflake connection "debug"
+[0m13:49:22.378453 [debug] [MainThread]: On debug: select 1 as id
+[0m13:49:22.378566 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:49:24.091648 [debug] [MainThread]: SQL status: SUCCESS 1 in 1.713 seconds
+[0m13:49:24.094230 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m13:49:24.095041 [info ] [MainThread]: [32mAll checks passed![0m
+[0m13:49:24.104138 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 2.627558, "process_in_blocks": "0", "process_kernel_time": 0.313774, "process_mem_max_rss": "237191168", "process_out_blocks": "0", "process_user_time": 1.566899}
+[0m13:49:24.104899 [debug] [MainThread]: Command `dbt debug` succeeded at 13:49:24.104768 after 2.63 seconds
+[0m13:49:24.105299 [debug] [MainThread]: Connection 'debug' was left open.
+[0m13:49:24.105608 [debug] [MainThread]: On debug: Close
+[0m13:49:24.399102 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d293140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d292f60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104d65c40>]}
+[0m13:49:24.400345 [debug] [MainThread]: Flushing usage events
+[0m13:49:24.705603 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:00:48.325623 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105466780>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1061e3fe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1061e3c20>]}
+
+
+============================== 13:00:48.328009 | 5d8571bf-8fb6-4b35-a46d-0ce7b165ec2c ==============================
+[0m13:00:48.328009 [info ] [MainThread]: Running with dbt=1.11.11
+[0m13:00:48.328275 [debug] [MainThread]: running dbt with arguments {'empty': 'False', 'use_experimental_parser': 'False', 'target_path': 'None', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'version_check': 'True', 'static_parser': 'True', 'profiles_dir': '/Users/simishrivastava/.dbt', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'debug': 'False', 'fail_fast': 'False', 'introspect': 'True', 'quiet': 'False', 'invocation_command': 'dbt compile', 'warn_error': 'None', 'no_print': 'None', 'use_colors': 'True', 'log_path': '/Users/simishrivastava/Projects/causal-demand-forecasting/dbt_demand/logs', 'write_json': 'True', 'indirect_selection': 'eager', 'log_format': 'default'}
+[0m13:00:48.976623 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m13:00:48.976901 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m13:00:48.977025 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m13:00:49.072423 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5d8571bf-8fb6-4b35-a46d-0ce7b165ec2c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cf536e0>]}
+[0m13:00:49.095195 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5d8571bf-8fb6-4b35-a46d-0ce7b165ec2c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c34d640>]}
+[0m13:00:49.095746 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m13:00:49.161514 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m13:00:49.161897 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m13:00:49.162069 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '5d8571bf-8fb6-4b35-a46d-0ce7b165ec2c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cf02810>]}
+[0m13:00:49.744113 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.dbt_demand.marts
+[0m13:00:49.747981 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '5d8571bf-8fb6-4b35-a46d-0ce7b165ec2c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d6414f0>]}
+[0m13:00:49.788389 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/simishrivastava/Projects/causal-demand-forecasting/dbt_demand/target/manifest.json
+[0m13:00:49.789508 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/simishrivastava/Projects/causal-demand-forecasting/dbt_demand/target/semantic_manifest.json
+[0m13:00:49.794330 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '5d8571bf-8fb6-4b35-a46d-0ce7b165ec2c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d6dbda0>]}
+[0m13:00:49.794531 [info ] [MainThread]: Found 4 models, 4 data tests, 5 sources, 536 macros
+[0m13:00:49.794669 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5d8571bf-8fb6-4b35-a46d-0ce7b165ec2c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d4d78f0>]}
+[0m13:00:49.795485 [info ] [MainThread]: 
+[0m13:00:49.795625 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:00:49.795736 [info ] [MainThread]: 
+[0m13:00:49.795931 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m13:00:49.797602 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_CAUSAL_DEMAND_DB_ANALYTICS'
+[0m13:00:49.804093 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_CAUSAL_DEMAND_DB_ANALYTICS_STAGING'
+[0m13:00:49.838351 [debug] [ThreadPool]: Using snowflake connection "list_CAUSAL_DEMAND_DB_ANALYTICS"
+[0m13:00:49.838618 [debug] [ThreadPool]: Using snowflake connection "list_CAUSAL_DEMAND_DB_ANALYTICS_STAGING"
+[0m13:00:49.839121 [debug] [ThreadPool]: On list_CAUSAL_DEMAND_DB_ANALYTICS: show objects in CAUSAL_DEMAND_DB.ANALYTICS
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "connection_name": "list_CAUSAL_DEMAND_DB_ANALYTICS"} */;
+[0m13:00:49.839262 [debug] [ThreadPool]: On list_CAUSAL_DEMAND_DB_ANALYTICS_STAGING: show objects in CAUSAL_DEMAND_DB.ANALYTICS_STAGING
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "connection_name": "list_CAUSAL_DEMAND_DB_ANALYTICS_STAGING"} */;
+[0m13:00:49.839394 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:00:49.839518 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:00:51.113567 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01c53f90-0206-1440-000e-5436000b4622
+[0m13:00:51.114052 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 002043 (02000): SQL compilation error:
+Object does not exist, or operation cannot be performed.
+[0m13:00:51.114449 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_relations_without_caching
+[0m13:00:51.114710 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m13:00:51.948192 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 2.109 seconds
+[0m13:00:51.952568 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5d8571bf-8fb6-4b35-a46d-0ce7b165ec2c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d43d070>]}
+[0m13:00:51.959322 [debug] [Thread-2 (]: Began running node model.dbt_demand.my_first_dbt_model
+[0m13:00:51.959868 [debug] [Thread-3 (]: Began running node model.dbt_demand.stg_forecast_outputs
+[0m13:00:51.960292 [debug] [Thread-4 (]: Began running node model.dbt_demand.stg_weekly_sales
+[0m13:00:51.960785 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_CAUSAL_DEMAND_DB_ANALYTICS, now model.dbt_demand.my_first_dbt_model)
+[0m13:00:51.961297 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_CAUSAL_DEMAND_DB_ANALYTICS_STAGING, now model.dbt_demand.stg_forecast_outputs)
+[0m13:00:51.961905 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.dbt_demand.stg_weekly_sales'
+[0m13:00:51.962400 [debug] [Thread-2 (]: Began compiling node model.dbt_demand.my_first_dbt_model
+[0m13:00:51.962840 [debug] [Thread-3 (]: Began compiling node model.dbt_demand.stg_forecast_outputs
+[0m13:00:51.963199 [debug] [Thread-4 (]: Began compiling node model.dbt_demand.stg_weekly_sales
+[0m13:00:51.972182 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_demand.my_first_dbt_model"
+[0m13:00:51.976190 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_demand.stg_forecast_outputs"
+[0m13:00:51.978395 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_demand.stg_weekly_sales"
+[0m13:00:51.979532 [debug] [Thread-4 (]: Began executing node model.dbt_demand.stg_weekly_sales
+[0m13:00:51.979854 [debug] [Thread-2 (]: Began executing node model.dbt_demand.my_first_dbt_model
+[0m13:00:51.980381 [debug] [Thread-4 (]: Finished running node model.dbt_demand.stg_weekly_sales
+[0m13:00:51.980610 [debug] [Thread-3 (]: Began executing node model.dbt_demand.stg_forecast_outputs
+[0m13:00:51.981024 [debug] [Thread-2 (]: Finished running node model.dbt_demand.my_first_dbt_model
+[0m13:00:51.981486 [debug] [Thread-3 (]: Finished running node model.dbt_demand.stg_forecast_outputs
+[0m13:00:51.981927 [debug] [Thread-5 (]: Began running node model.dbt_demand.my_second_dbt_model
+[0m13:00:51.982218 [debug] [Thread-4 (]: Began running node test.dbt_demand.not_null_my_first_dbt_model_id.5fb22c2710
+[0m13:00:51.982615 [debug] [Thread-5 (]: Acquiring new snowflake connection 'model.dbt_demand.my_second_dbt_model'
+[0m13:00:51.982867 [debug] [Thread-2 (]: Began running node test.dbt_demand.unique_my_first_dbt_model_id.16e066b321
+[0m13:00:51.983126 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.dbt_demand.stg_weekly_sales, now test.dbt_demand.not_null_my_first_dbt_model_id.5fb22c2710)
+[0m13:00:51.983374 [debug] [Thread-5 (]: Began compiling node model.dbt_demand.my_second_dbt_model
+[0m13:00:51.983611 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.dbt_demand.my_first_dbt_model, now test.dbt_demand.unique_my_first_dbt_model_id.16e066b321)
+[0m13:00:51.983831 [debug] [Thread-4 (]: Began compiling node test.dbt_demand.not_null_my_first_dbt_model_id.5fb22c2710
+[0m13:00:51.985582 [debug] [Thread-5 (]: Writing injected SQL for node "model.dbt_demand.my_second_dbt_model"
+[0m13:00:51.985805 [debug] [Thread-2 (]: Began compiling node test.dbt_demand.unique_my_first_dbt_model_id.16e066b321
+[0m13:00:51.992756 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_demand.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m13:00:51.996238 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_demand.unique_my_first_dbt_model_id.16e066b321"
+[0m13:00:51.996583 [debug] [Thread-5 (]: Began executing node model.dbt_demand.my_second_dbt_model
+[0m13:00:51.996928 [debug] [Thread-5 (]: Finished running node model.dbt_demand.my_second_dbt_model
+[0m13:00:51.997238 [debug] [Thread-2 (]: Began executing node test.dbt_demand.unique_my_first_dbt_model_id.16e066b321
+[0m13:00:51.997557 [debug] [Thread-2 (]: Finished running node test.dbt_demand.unique_my_first_dbt_model_id.16e066b321
+[0m13:00:51.997738 [debug] [Thread-4 (]: Began executing node test.dbt_demand.not_null_my_first_dbt_model_id.5fb22c2710
+[0m13:00:51.997917 [debug] [Thread-3 (]: Began running node test.dbt_demand.not_null_my_second_dbt_model_id.151b76d778
+[0m13:00:51.998096 [debug] [Thread-2 (]: Began running node test.dbt_demand.unique_my_second_dbt_model_id.57a0f8c493
+[0m13:00:51.998409 [debug] [Thread-4 (]: Finished running node test.dbt_demand.not_null_my_first_dbt_model_id.5fb22c2710
+[0m13:00:51.998591 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.dbt_demand.stg_forecast_outputs, now test.dbt_demand.not_null_my_second_dbt_model_id.151b76d778)
+[0m13:00:51.998782 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.dbt_demand.unique_my_first_dbt_model_id.16e066b321, now test.dbt_demand.unique_my_second_dbt_model_id.57a0f8c493)
+[0m13:00:51.998999 [debug] [Thread-3 (]: Began compiling node test.dbt_demand.not_null_my_second_dbt_model_id.151b76d778
+[0m13:00:51.999170 [debug] [Thread-2 (]: Began compiling node test.dbt_demand.unique_my_second_dbt_model_id.57a0f8c493
+[0m13:00:52.001135 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_demand.not_null_my_second_dbt_model_id.151b76d778"
+[0m13:00:52.002974 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_demand.unique_my_second_dbt_model_id.57a0f8c493"
+[0m13:00:52.003308 [debug] [Thread-3 (]: Began executing node test.dbt_demand.not_null_my_second_dbt_model_id.151b76d778
+[0m13:00:52.003586 [debug] [Thread-3 (]: Finished running node test.dbt_demand.not_null_my_second_dbt_model_id.151b76d778
+[0m13:00:52.003742 [debug] [Thread-2 (]: Began executing node test.dbt_demand.unique_my_second_dbt_model_id.57a0f8c493
+[0m13:00:52.004024 [debug] [Thread-2 (]: Finished running node test.dbt_demand.unique_my_second_dbt_model_id.57a0f8c493
+[0m13:00:52.004494 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:00:52.004640 [debug] [MainThread]: Connection 'test.dbt_demand.unique_my_second_dbt_model_id.57a0f8c493' was left open.
+[0m13:00:52.004776 [debug] [MainThread]: On test.dbt_demand.unique_my_second_dbt_model_id.57a0f8c493: Close
+[0m13:00:52.400988 [debug] [MainThread]: Connection 'test.dbt_demand.not_null_my_second_dbt_model_id.151b76d778' was left open.
+[0m13:00:52.401803 [debug] [MainThread]: On test.dbt_demand.not_null_my_second_dbt_model_id.151b76d778: Close
+[0m13:00:52.639518 [debug] [MainThread]: Connection 'test.dbt_demand.not_null_my_first_dbt_model_id.5fb22c2710' was properly closed.
+[0m13:00:52.640080 [debug] [MainThread]: Connection 'model.dbt_demand.my_second_dbt_model' was properly closed.
+[0m13:00:52.641609 [debug] [MainThread]: Command end result
+[0m13:00:52.667032 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/simishrivastava/Projects/causal-demand-forecasting/dbt_demand/target/manifest.json
+[0m13:00:52.668121 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/simishrivastava/Projects/causal-demand-forecasting/dbt_demand/target/semantic_manifest.json
+[0m13:00:52.671955 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/simishrivastava/Projects/causal-demand-forecasting/dbt_demand/target/run_results.json
+[0m13:00:52.676261 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 4.39032, "process_in_blocks": "0", "process_kernel_time": 0.366315, "process_mem_max_rss": "255737856", "process_out_blocks": "0", "process_user_time": 2.324258}
+[0m13:00:52.676504 [debug] [MainThread]: Command `dbt compile` succeeded at 13:00:52.676451 after 4.39 seconds
+[0m13:00:52.676685 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1053e7740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1061e3ec0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1061e3d40>]}
+[0m13:00:52.676865 [debug] [MainThread]: Flushing usage events
+[0m13:00:53.278520 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:01:32.405839 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1101eee40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111cbb920>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111cbb500>]}
+
+
+============================== 13:01:32.408252 | c7e62d78-11f2-4d7d-bf27-a9f72648a8dc ==============================
+[0m13:01:32.408252 [info ] [MainThread]: Running with dbt=1.11.11
+[0m13:01:32.408529 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'warn_error': 'None', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'static_parser': 'True', 'log_path': '/Users/simishrivastava/Projects/causal-demand-forecasting/dbt_demand/logs', 'quiet': 'False', 'empty': 'False', 'version_check': 'True', 'target_path': 'None', 'debug': 'False', 'no_print': 'None', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'use_colors': 'True', 'invocation_command': 'dbt run --select staging', 'fail_fast': 'False', 'write_json': 'True', 'profiles_dir': '/Users/simishrivastava/.dbt', 'introspect': 'True'}
+[0m13:01:32.902484 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m13:01:32.902755 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m13:01:32.902898 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m13:01:33.005004 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c7e62d78-11f2-4d7d-bf27-a9f72648a8dc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105ced670>]}
+[0m13:01:33.028265 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c7e62d78-11f2-4d7d-bf27-a9f72648a8dc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1238473b0>]}
+[0m13:01:33.028782 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m13:01:33.099330 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m13:01:33.161259 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:01:33.161469 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m13:01:33.161590 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:01:33.163866 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.dbt_demand.marts
+[0m13:01:33.180639 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c7e62d78-11f2-4d7d-bf27-a9f72648a8dc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x123ab35f0>]}
+[0m13:01:33.269455 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/simishrivastava/Projects/causal-demand-forecasting/dbt_demand/target/manifest.json
+[0m13:01:33.270670 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/simishrivastava/Projects/causal-demand-forecasting/dbt_demand/target/semantic_manifest.json
+[0m13:01:33.276281 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c7e62d78-11f2-4d7d-bf27-a9f72648a8dc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x126d3df40>]}
+[0m13:01:33.276486 [info ] [MainThread]: Found 4 models, 4 data tests, 5 sources, 536 macros
+[0m13:01:33.276626 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c7e62d78-11f2-4d7d-bf27-a9f72648a8dc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105e57590>]}
+[0m13:01:33.277280 [info ] [MainThread]: 
+[0m13:01:33.277411 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:01:33.277519 [info ] [MainThread]: 
+[0m13:01:33.277715 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m13:01:33.279407 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_CAUSAL_DEMAND_DB'
+[0m13:01:33.308733 [debug] [ThreadPool]: Using snowflake connection "list_CAUSAL_DEMAND_DB"
+[0m13:01:33.308927 [debug] [ThreadPool]: On list_CAUSAL_DEMAND_DB: show terse schemas in database CAUSAL_DEMAND_DB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "connection_name": "list_CAUSAL_DEMAND_DB"} */
+[0m13:01:33.309041 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:01:34.751128 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.442 seconds
+[0m13:01:34.755150 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_CAUSAL_DEMAND_DB, now create_CAUSAL_DEMAND_DB_ANALYTICS_STAGING)
+[0m13:01:34.755849 [debug] [ThreadPool]: Creating schema "database: "CAUSAL_DEMAND_DB"
+schema: "ANALYTICS_STAGING"
+"
+[0m13:01:34.761300 [debug] [ThreadPool]: Using snowflake connection "create_CAUSAL_DEMAND_DB_ANALYTICS_STAGING"
+[0m13:01:34.761659 [debug] [ThreadPool]: On create_CAUSAL_DEMAND_DB_ANALYTICS_STAGING: create schema if not exists CAUSAL_DEMAND_DB.ANALYTICS_STAGING
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "connection_name": "create_CAUSAL_DEMAND_DB_ANALYTICS_STAGING"} */
+[0m13:01:34.955284 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.193 seconds
+[0m13:01:34.958258 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_CAUSAL_DEMAND_DB_ANALYTICS_STAGING, now list_CAUSAL_DEMAND_DB_ANALYTICS_STAGING)
+[0m13:01:34.965600 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_CAUSAL_DEMAND_DB_ANALYTICS'
+[0m13:01:34.975986 [debug] [ThreadPool]: Using snowflake connection "list_CAUSAL_DEMAND_DB_ANALYTICS_STAGING"
+[0m13:01:34.979959 [debug] [ThreadPool]: Using snowflake connection "list_CAUSAL_DEMAND_DB_ANALYTICS"
+[0m13:01:34.980358 [debug] [ThreadPool]: On list_CAUSAL_DEMAND_DB_ANALYTICS_STAGING: show objects in CAUSAL_DEMAND_DB.ANALYTICS_STAGING
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "connection_name": "list_CAUSAL_DEMAND_DB_ANALYTICS_STAGING"} */;
+[0m13:01:34.980623 [debug] [ThreadPool]: On list_CAUSAL_DEMAND_DB_ANALYTICS: show objects in CAUSAL_DEMAND_DB.ANALYTICS
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "connection_name": "list_CAUSAL_DEMAND_DB_ANALYTICS"} */;
+[0m13:01:34.981130 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:01:35.274380 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.293 seconds
+[0m13:01:36.599703 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 1.618 seconds
+[0m13:01:36.603926 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c7e62d78-11f2-4d7d-bf27-a9f72648a8dc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1238a8aa0>]}
+[0m13:01:36.608701 [debug] [Thread-2 (]: Began running node model.dbt_demand.stg_forecast_outputs
+[0m13:01:36.609199 [debug] [Thread-3 (]: Began running node model.dbt_demand.stg_weekly_sales
+[0m13:01:36.609824 [info ] [Thread-2 (]: 1 of 2 START sql view model ANALYTICS_STAGING.stg_forecast_outputs ............. [RUN]
+[0m13:01:36.610377 [info ] [Thread-3 (]: 2 of 2 START sql view model ANALYTICS_STAGING.stg_weekly_sales ................. [RUN]
+[0m13:01:36.610827 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_CAUSAL_DEMAND_DB_ANALYTICS_STAGING, now model.dbt_demand.stg_forecast_outputs)
+[0m13:01:36.611220 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_CAUSAL_DEMAND_DB_ANALYTICS, now model.dbt_demand.stg_weekly_sales)
+[0m13:01:36.611556 [debug] [Thread-2 (]: Began compiling node model.dbt_demand.stg_forecast_outputs
+[0m13:01:36.611874 [debug] [Thread-3 (]: Began compiling node model.dbt_demand.stg_weekly_sales
+[0m13:01:36.618969 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_demand.stg_forecast_outputs"
+[0m13:01:36.621432 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_demand.stg_weekly_sales"
+[0m13:01:36.622700 [debug] [Thread-3 (]: Began executing node model.dbt_demand.stg_weekly_sales
+[0m13:01:36.622988 [debug] [Thread-2 (]: Began executing node model.dbt_demand.stg_forecast_outputs
+[0m13:01:36.642700 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_demand.stg_forecast_outputs"
+[0m13:01:36.642931 [debug] [Thread-3 (]: Writing runtime sql for node "model.dbt_demand.stg_weekly_sales"
+[0m13:01:36.644081 [debug] [Thread-3 (]: Using snowflake connection "model.dbt_demand.stg_weekly_sales"
+[0m13:01:36.644622 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_demand.stg_forecast_outputs"
+[0m13:01:36.644867 [debug] [Thread-3 (]: On model.dbt_demand.stg_weekly_sales: create or replace   view CAUSAL_DEMAND_DB.ANALYTICS_STAGING.stg_weekly_sales
+  
+  
+  
+  
+  as (
+    with source as (
+    select * from CAUSAL_DEMAND_DB.STAGING.RAW_WEEKLY_SALES
+),
+
+renamed as (
+    select
+        store_nbr::integer as store_nbr,
+        family,
+        week::date as week,
+        sales::float as sales,
+        onpromotion::integer as onpromotion,
+        oil_price::float as oil_price,
+        city,
+        state,
+        type as store_type,
+        cluster::integer as cluster,
+        holiday_count::float as holiday_count,
+        has_holiday::float as has_holiday
+    from source
+)
+
+select * from renamed
+  )
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "node_id": "model.dbt_demand.stg_weekly_sales"} */;
+[0m13:01:36.645090 [debug] [Thread-2 (]: On model.dbt_demand.stg_forecast_outputs: create or replace   view CAUSAL_DEMAND_DB.ANALYTICS_STAGING.stg_forecast_outputs
+  
+  
+  
+  
+  as (
+    with source as (
+    select * from CAUSAL_DEMAND_DB.STAGING.RAW_FORECAST_OUTPUTS
+),
+
+renamed as (
+    select
+        store_nbr::integer as store_nbr,
+        family,
+        week::date as week,
+        actual::float as actual_sales,
+        forecast::float as forecasted_sales,
+        model,
+        (actual::float - forecast::float) as forecast_error,
+        abs(actual::float - forecast::float) / nullif(actual::float, 0) as abs_pct_error
+    from source
+)
+
+select * from renamed
+  )
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "node_id": "model.dbt_demand.stg_forecast_outputs"} */;
+[0m13:01:37.199851 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.554 seconds
+[0m13:01:37.228824 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c7e62d78-11f2-4d7d-bf27-a9f72648a8dc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111ce7860>]}
+[0m13:01:37.229368 [info ] [Thread-3 (]: 2 of 2 OK created sql view model ANALYTICS_STAGING.stg_weekly_sales ............ [[32mSUCCESS 1[0m in 0.62s]
+[0m13:01:37.229799 [debug] [Thread-3 (]: Finished running node model.dbt_demand.stg_weekly_sales
+[0m13:01:37.603823 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.958 seconds
+[0m13:01:37.608487 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c7e62d78-11f2-4d7d-bf27-a9f72648a8dc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x127cdc800>]}
+[0m13:01:37.609938 [info ] [Thread-2 (]: 1 of 2 OK created sql view model ANALYTICS_STAGING.stg_forecast_outputs ........ [[32mSUCCESS 1[0m in 1.00s]
+[0m13:01:37.610717 [debug] [Thread-2 (]: Finished running node model.dbt_demand.stg_forecast_outputs
+[0m13:01:37.613027 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:01:37.613449 [debug] [MainThread]: Connection 'model.dbt_demand.stg_forecast_outputs' was left open.
+[0m13:01:37.613832 [debug] [MainThread]: On model.dbt_demand.stg_forecast_outputs: Close
+[0m13:01:37.859190 [debug] [MainThread]: Connection 'model.dbt_demand.stg_weekly_sales' was left open.
+[0m13:01:37.860165 [debug] [MainThread]: On model.dbt_demand.stg_weekly_sales: Close
+[0m13:01:38.118607 [info ] [MainThread]: 
+[0m13:01:38.119504 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 4.84 seconds (4.84s).
+[0m13:01:38.120982 [debug] [MainThread]: Command end result
+[0m13:01:38.149941 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/simishrivastava/Projects/causal-demand-forecasting/dbt_demand/target/manifest.json
+[0m13:01:38.151228 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/simishrivastava/Projects/causal-demand-forecasting/dbt_demand/target/semantic_manifest.json
+[0m13:01:38.154835 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/simishrivastava/Projects/causal-demand-forecasting/dbt_demand/target/run_results.json
+[0m13:01:38.155023 [info ] [MainThread]: 
+[0m13:01:38.155238 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:01:38.155408 [info ] [MainThread]: 
+[0m13:01:38.155592 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m13:01:38.159554 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 5.786739, "process_in_blocks": "0", "process_kernel_time": 0.313277, "process_mem_max_rss": "247103488", "process_out_blocks": "0", "process_user_time": 1.991611}
+[0m13:01:38.159895 [debug] [MainThread]: Command `dbt run` succeeded at 13:01:38.159840 after 5.79 seconds
+[0m13:01:38.160124 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111c59580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111cbb6e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113390470>]}
+[0m13:01:38.160325 [debug] [MainThread]: Flushing usage events
+[0m13:01:38.568536 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:03:37.501378 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ae5820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107ebbbc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107ebb7a0>]}
+
+
+============================== 13:03:37.503813 | 1949d228-598d-4ab6-90bf-4a74af2788b6 ==============================
+[0m13:03:37.503813 [info ] [MainThread]: Running with dbt=1.11.11
+[0m13:03:37.504084 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'static_parser': 'True', 'log_cache_events': 'False', 'empty': 'False', 'write_json': 'True', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'introspect': 'True', 'debug': 'False', 'version_check': 'True', 'profiles_dir': '/Users/simishrivastava/.dbt', 'warn_error': 'None', 'printer_width': '80', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'partial_parse': 'True', 'target_path': 'None', 'use_colors': 'True', 'cache_selected_only': 'False', 'no_print': 'None', 'log_path': '/Users/simishrivastava/Projects/causal-demand-forecasting/dbt_demand/logs', 'invocation_command': 'dbt run --select marts', 'log_format': 'default'}
+[0m13:03:38.156651 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m13:03:38.156896 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m13:03:38.157023 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m13:03:38.248121 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1949d228-598d-4ab6-90bf-4a74af2788b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11846dbe0>]}
+[0m13:03:38.270729 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1949d228-598d-4ab6-90bf-4a74af2788b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f7eb440>]}
+[0m13:03:38.271267 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m13:03:38.339807 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m13:03:38.405115 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 0 files changed.
+[0m13:03:38.405381 [debug] [MainThread]: Partial parsing: added file: dbt_demand://models/marts/fct_weekly_sales.sql
+[0m13:03:38.405514 [debug] [MainThread]: Partial parsing: added file: dbt_demand://models/marts/fct_forecast_performance.sql
+[0m13:03:38.557978 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1949d228-598d-4ab6-90bf-4a74af2788b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1189ad130>]}
+[0m13:03:38.595529 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/simishrivastava/Projects/causal-demand-forecasting/dbt_demand/target/manifest.json
+[0m13:03:38.596579 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/simishrivastava/Projects/causal-demand-forecasting/dbt_demand/target/semantic_manifest.json
+[0m13:03:38.602676 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1949d228-598d-4ab6-90bf-4a74af2788b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x118a54dd0>]}
+[0m13:03:38.602874 [info ] [MainThread]: Found 6 models, 4 data tests, 5 sources, 536 macros
+[0m13:03:38.603015 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1949d228-598d-4ab6-90bf-4a74af2788b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x118a18b00>]}
+[0m13:03:38.603662 [info ] [MainThread]: 
+[0m13:03:38.603800 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:03:38.603907 [info ] [MainThread]: 
+[0m13:03:38.604099 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m13:03:38.605798 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_CAUSAL_DEMAND_DB'
+[0m13:03:38.635481 [debug] [ThreadPool]: Using snowflake connection "list_CAUSAL_DEMAND_DB"
+[0m13:03:38.635669 [debug] [ThreadPool]: On list_CAUSAL_DEMAND_DB: show terse schemas in database CAUSAL_DEMAND_DB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "connection_name": "list_CAUSAL_DEMAND_DB"} */
+[0m13:03:38.635781 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:03:40.099070 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 1.463 seconds
+[0m13:03:40.100266 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_CAUSAL_DEMAND_DB, now create_CAUSAL_DEMAND_DB_ANALYTICS_MARTS)
+[0m13:03:40.100522 [debug] [ThreadPool]: Creating schema "database: "CAUSAL_DEMAND_DB"
+schema: "ANALYTICS_MARTS"
+"
+[0m13:03:40.103220 [debug] [ThreadPool]: Using snowflake connection "create_CAUSAL_DEMAND_DB_ANALYTICS_MARTS"
+[0m13:03:40.103408 [debug] [ThreadPool]: On create_CAUSAL_DEMAND_DB_ANALYTICS_MARTS: create schema if not exists CAUSAL_DEMAND_DB.ANALYTICS_MARTS
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "connection_name": "create_CAUSAL_DEMAND_DB_ANALYTICS_MARTS"} */
+[0m13:03:40.396125 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.292 seconds
+[0m13:03:40.401123 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_CAUSAL_DEMAND_DB_ANALYTICS_MARTS, now list_CAUSAL_DEMAND_DB_ANALYTICS_MARTS)
+[0m13:03:40.402554 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_CAUSAL_DEMAND_DB_ANALYTICS'
+[0m13:03:40.417525 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_CAUSAL_DEMAND_DB_ANALYTICS_STAGING'
+[0m13:03:40.419344 [debug] [ThreadPool]: Using snowflake connection "list_CAUSAL_DEMAND_DB_ANALYTICS_MARTS"
+[0m13:03:40.420713 [debug] [ThreadPool]: Using snowflake connection "list_CAUSAL_DEMAND_DB_ANALYTICS"
+[0m13:03:40.421911 [debug] [ThreadPool]: Using snowflake connection "list_CAUSAL_DEMAND_DB_ANALYTICS_STAGING"
+[0m13:03:40.422084 [debug] [ThreadPool]: On list_CAUSAL_DEMAND_DB_ANALYTICS_MARTS: show objects in CAUSAL_DEMAND_DB.ANALYTICS_MARTS
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "connection_name": "list_CAUSAL_DEMAND_DB_ANALYTICS_MARTS"} */;
+[0m13:03:40.422239 [debug] [ThreadPool]: On list_CAUSAL_DEMAND_DB_ANALYTICS: show objects in CAUSAL_DEMAND_DB.ANALYTICS
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "connection_name": "list_CAUSAL_DEMAND_DB_ANALYTICS"} */;
+[0m13:03:40.422385 [debug] [ThreadPool]: On list_CAUSAL_DEMAND_DB_ANALYTICS_STAGING: show objects in CAUSAL_DEMAND_DB.ANALYTICS_STAGING
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "connection_name": "list_CAUSAL_DEMAND_DB_ANALYTICS_STAGING"} */;
+[0m13:03:40.422710 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:03:40.422888 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:03:40.704572 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.282 seconds
+[0m13:03:41.313957 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.891 seconds
+[0m13:03:41.972834 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 1.550 seconds
+[0m13:03:41.977295 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1949d228-598d-4ab6-90bf-4a74af2788b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11832cef0>]}
+[0m13:03:41.982997 [debug] [Thread-2 (]: Began running node model.dbt_demand.fct_forecast_performance
+[0m13:03:41.983468 [debug] [Thread-3 (]: Began running node model.dbt_demand.fct_weekly_sales
+[0m13:03:41.984156 [info ] [Thread-2 (]: 1 of 2 START sql table model ANALYTICS_MARTS.fct_forecast_performance .......... [RUN]
+[0m13:03:41.984728 [info ] [Thread-3 (]: 2 of 2 START sql table model ANALYTICS_MARTS.fct_weekly_sales .................. [RUN]
+[0m13:03:41.985326 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_CAUSAL_DEMAND_DB_ANALYTICS_MARTS, now model.dbt_demand.fct_forecast_performance)
+[0m13:03:41.985793 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_CAUSAL_DEMAND_DB_ANALYTICS, now model.dbt_demand.fct_weekly_sales)
+[0m13:03:41.986201 [debug] [Thread-2 (]: Began compiling node model.dbt_demand.fct_forecast_performance
+[0m13:03:41.986551 [debug] [Thread-3 (]: Began compiling node model.dbt_demand.fct_weekly_sales
+[0m13:03:41.996339 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_demand.fct_forecast_performance"
+[0m13:03:41.999437 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_demand.fct_weekly_sales"
+[0m13:03:42.000988 [debug] [Thread-3 (]: Began executing node model.dbt_demand.fct_weekly_sales
+[0m13:03:42.001328 [debug] [Thread-2 (]: Began executing node model.dbt_demand.fct_forecast_performance
+[0m13:03:42.028826 [debug] [Thread-3 (]: Writing runtime sql for node "model.dbt_demand.fct_weekly_sales"
+[0m13:03:42.029108 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_demand.fct_forecast_performance"
+[0m13:03:42.030155 [debug] [Thread-3 (]: Using snowflake connection "model.dbt_demand.fct_weekly_sales"
+[0m13:03:42.030685 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_demand.fct_forecast_performance"
+[0m13:03:42.030893 [debug] [Thread-3 (]: On model.dbt_demand.fct_weekly_sales: create or replace transient table CAUSAL_DEMAND_DB.ANALYTICS_MARTS.fct_weekly_sales
+    
+    
+    
+    as (with weekly_sales as (
+    select * from CAUSAL_DEMAND_DB.ANALYTICS_STAGING.stg_weekly_sales
+),
+
+with_metrics as (
+    select
+        store_nbr,
+        family,
+        week,
+        sales,
+        onpromotion,
+        oil_price,
+        city,
+        state,
+        store_type,
+        cluster,
+        holiday_count,
+        has_holiday,
+        avg(sales) over (
+            partition by store_nbr, family
+            order by week
+            rows between 3 preceding and 1 preceding
+        ) as rolling_avg_4wk,
+        sum(sales) over (
+            partition by store_nbr, family
+            order by week
+            rows between 51 preceding and current row
+        ) as rolling_52wk_sales,
+        lag(sales, 52) over (
+            partition by store_nbr, family
+            order by week
+        ) as sales_same_week_last_year,
+        sales - lag(sales, 52) over (
+            partition by store_nbr, family
+            order by week
+        ) as yoy_change
+    from weekly_sales
+)
+
+select * from with_metrics
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "node_id": "model.dbt_demand.fct_weekly_sales"} */;
+[0m13:03:42.031128 [debug] [Thread-2 (]: On model.dbt_demand.fct_forecast_performance: create or replace transient table CAUSAL_DEMAND_DB.ANALYTICS_MARTS.fct_forecast_performance
+    
+    
+    
+    as (with forecasts as (
+    select * from CAUSAL_DEMAND_DB.ANALYTICS_STAGING.stg_forecast_outputs
+),
+
+performance as (
+    select
+        store_nbr,
+        family,
+        model,
+        count(*) as num_weeks,
+        avg(abs_pct_error) as avg_wape,
+        sqrt(avg(power(forecast_error, 2))) as rmse,
+        avg(abs(forecast_error)) as mae,
+        sum(actual_sales) as total_actual_sales,
+        sum(forecasted_sales) as total_forecasted_sales
+    from forecasts
+    group by store_nbr, family, model
+)
+
+select * from performance
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "node_id": "model.dbt_demand.fct_forecast_performance"} */;
+[0m13:03:43.926542 [debug] [Thread-2 (]: SQL status: SUCCESS 5 in 1.894 seconds
+[0m13:03:43.956729 [debug] [Thread-3 (]: SQL status: SUCCESS 1210 in 1.925 seconds
+[0m13:03:43.958539 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1949d228-598d-4ab6-90bf-4a74af2788b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1063c0980>]}
+[0m13:03:43.958824 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1949d228-598d-4ab6-90bf-4a74af2788b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119e392b0>]}
+[0m13:03:43.959440 [info ] [Thread-2 (]: 1 of 2 OK created sql table model ANALYTICS_MARTS.fct_forecast_performance ..... [[32mSUCCESS 5[0m in 1.97s]
+[0m13:03:43.959859 [info ] [Thread-3 (]: 2 of 2 OK created sql table model ANALYTICS_MARTS.fct_weekly_sales ............. [[32mSUCCESS 1210[0m in 1.97s]
+[0m13:03:43.960257 [debug] [Thread-2 (]: Finished running node model.dbt_demand.fct_forecast_performance
+[0m13:03:43.960573 [debug] [Thread-3 (]: Finished running node model.dbt_demand.fct_weekly_sales
+[0m13:03:43.961842 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:03:43.962091 [debug] [MainThread]: Connection 'model.dbt_demand.fct_forecast_performance' was left open.
+[0m13:03:43.962284 [debug] [MainThread]: On model.dbt_demand.fct_forecast_performance: Close
+[0m13:03:44.233522 [debug] [MainThread]: Connection 'model.dbt_demand.fct_weekly_sales' was left open.
+[0m13:03:44.234408 [debug] [MainThread]: On model.dbt_demand.fct_weekly_sales: Close
+[0m13:03:44.525545 [debug] [MainThread]: Connection 'list_CAUSAL_DEMAND_DB_ANALYTICS_STAGING' was left open.
+[0m13:03:44.526772 [debug] [MainThread]: On list_CAUSAL_DEMAND_DB_ANALYTICS_STAGING: Close
+[0m13:03:44.796706 [info ] [MainThread]: 
+[0m13:03:44.797010 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 6.19 seconds (6.19s).
+[0m13:03:44.797537 [debug] [MainThread]: Command end result
+[0m13:03:44.814758 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/simishrivastava/Projects/causal-demand-forecasting/dbt_demand/target/manifest.json
+[0m13:03:44.816234 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/simishrivastava/Projects/causal-demand-forecasting/dbt_demand/target/semantic_manifest.json
+[0m13:03:44.819903 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/simishrivastava/Projects/causal-demand-forecasting/dbt_demand/target/run_results.json
+[0m13:03:44.820060 [info ] [MainThread]: 
+[0m13:03:44.820232 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:03:44.820351 [info ] [MainThread]: 
+[0m13:03:44.820487 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m13:03:44.824820 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 7.3682184, "process_in_blocks": "0", "process_kernel_time": 0.378574, "process_mem_max_rss": "247447552", "process_out_blocks": "0", "process_user_time": 2.074645}
+[0m13:03:44.825169 [debug] [MainThread]: Command `dbt run` succeeded at 13:03:44.825120 after 7.37 seconds
+[0m13:03:44.825377 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1014cac60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107ebb920>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107ebbbc0>]}
+[0m13:03:44.825542 [debug] [MainThread]: Flushing usage events
+[0m13:03:45.428189 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:06:03.661260 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10781e420>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1080bb0b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1080bacc0>]}
+
+
+============================== 13:06:03.663674 | b7d7ef2b-8163-4ce7-b860-dee124bf6953 ==============================
+[0m13:06:03.663674 [info ] [MainThread]: Running with dbt=1.11.11
+[0m13:06:03.663943 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'log_cache_events': 'False', 'log_path': '/Users/simishrivastava/Projects/causal-demand-forecasting/dbt_demand/logs', 'partial_parse': 'True', 'profiles_dir': '/Users/simishrivastava/.dbt', 'write_json': 'True', 'debug': 'False', 'version_check': 'True', 'cache_selected_only': 'False', 'printer_width': '80', 'fail_fast': 'False', 'quiet': 'False', 'invocation_command': 'dbt test', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'warn_error': 'None', 'log_format': 'default', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'introspect': 'True', 'empty': 'None', 'use_colors': 'True', 'target_path': 'None'}
+[0m13:06:04.319465 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m13:06:04.319708 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m13:06:04.319833 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m13:06:04.416221 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b7d7ef2b-8163-4ce7-b860-dee124bf6953', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1080e87d0>]}
+[0m13:06:04.439053 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b7d7ef2b-8163-4ce7-b860-dee124bf6953', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e7945f0>]}
+[0m13:06:04.439578 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m13:06:04.505448 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m13:06:04.570071 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m13:06:04.570378 [debug] [MainThread]: Partial parsing: added file: dbt_demand://models/staging/schema.yml
+[0m13:06:04.679348 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `accepted_values` defined on
+'stg_weekly_sales' in package 'dbt_demand' (models/staging/schema.yml).
+Arguments to generic tests should be nested under the `arguments` property.
+[0m13:06:04.679612 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'b7d7ef2b-8163-4ce7-b860-dee124bf6953', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ee042c0>]}
+[0m13:06:04.723675 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b7d7ef2b-8163-4ce7-b860-dee124bf6953', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107f03b90>]}
+[0m13:06:04.761658 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/simishrivastava/Projects/causal-demand-forecasting/dbt_demand/target/manifest.json
+[0m13:06:04.762787 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/simishrivastava/Projects/causal-demand-forecasting/dbt_demand/target/semantic_manifest.json
+[0m13:06:04.772812 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b7d7ef2b-8163-4ce7-b860-dee124bf6953', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f3f1700>]}
+[0m13:06:04.773009 [info ] [MainThread]: Found 6 models, 13 data tests, 5 sources, 536 macros
+[0m13:06:04.773150 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b7d7ef2b-8163-4ce7-b860-dee124bf6953', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107295af0>]}
+[0m13:06:04.774055 [info ] [MainThread]: 
+[0m13:06:04.774202 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:06:04.774314 [info ] [MainThread]: 
+[0m13:06:04.774500 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m13:06:04.776335 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_CAUSAL_DEMAND_DB_ANALYTICS_STAGING'
+[0m13:06:04.782725 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_CAUSAL_DEMAND_DB_ANALYTICS'
+[0m13:06:04.785723 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_CAUSAL_DEMAND_DB_ANALYTICS_MARTS'
+[0m13:06:04.811423 [debug] [ThreadPool]: Using snowflake connection "list_CAUSAL_DEMAND_DB_ANALYTICS_STAGING"
+[0m13:06:04.811681 [debug] [ThreadPool]: Using snowflake connection "list_CAUSAL_DEMAND_DB_ANALYTICS"
+[0m13:06:04.811898 [debug] [ThreadPool]: Using snowflake connection "list_CAUSAL_DEMAND_DB_ANALYTICS_MARTS"
+[0m13:06:04.812041 [debug] [ThreadPool]: On list_CAUSAL_DEMAND_DB_ANALYTICS_STAGING: show objects in CAUSAL_DEMAND_DB.ANALYTICS_STAGING
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "connection_name": "list_CAUSAL_DEMAND_DB_ANALYTICS_STAGING"} */;
+[0m13:06:04.812179 [debug] [ThreadPool]: On list_CAUSAL_DEMAND_DB_ANALYTICS: show objects in CAUSAL_DEMAND_DB.ANALYTICS
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "connection_name": "list_CAUSAL_DEMAND_DB_ANALYTICS"} */;
+[0m13:06:04.812313 [debug] [ThreadPool]: On list_CAUSAL_DEMAND_DB_ANALYTICS_MARTS: show objects in CAUSAL_DEMAND_DB.ANALYTICS_MARTS
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "connection_name": "list_CAUSAL_DEMAND_DB_ANALYTICS_MARTS"} */;
+[0m13:06:04.812427 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:06:04.812528 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:06:04.812624 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:06:06.106565 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 1.294 seconds
+[0m13:06:06.730865 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 1.918 seconds
+[0m13:06:06.960884 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 2.148 seconds
+[0m13:06:06.965632 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b7d7ef2b-8163-4ce7-b860-dee124bf6953', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1079d3920>]}
+[0m13:06:06.969206 [debug] [Thread-2 (]: Began running node test.dbt_demand.accepted_values_stg_weekly_sales_family__GROCERY_I__BEVERAGES__MEATS__CLEANING__DAIRY.597edbc74f
+[0m13:06:06.969638 [debug] [Thread-3 (]: Began running node test.dbt_demand.not_null_my_first_dbt_model_id.5fb22c2710
+[0m13:06:06.970080 [debug] [Thread-4 (]: Began running node test.dbt_demand.not_null_my_second_dbt_model_id.151b76d778
+[0m13:06:06.970825 [debug] [Thread-5 (]: Began running node test.dbt_demand.not_null_stg_forecast_outputs_actual_sales.2274dd1c4f
+[0m13:06:06.970532 [info ] [Thread-2 (]: 1 of 13 START test accepted_values_stg_weekly_sales_family__GROCERY_I__BEVERAGES__MEATS__CLEANING__DAIRY  [RUN]
+[0m13:06:06.971274 [info ] [Thread-3 (]: 2 of 13 START test not_null_my_first_dbt_model_id .............................. [RUN]
+[0m13:06:06.971653 [info ] [Thread-4 (]: 3 of 13 START test not_null_my_second_dbt_model_id ............................. [RUN]
+[0m13:06:06.972052 [info ] [Thread-5 (]: 4 of 13 START test not_null_stg_forecast_outputs_actual_sales .................. [RUN]
+[0m13:06:06.972485 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_CAUSAL_DEMAND_DB_ANALYTICS_STAGING, now test.dbt_demand.accepted_values_stg_weekly_sales_family__GROCERY_I__BEVERAGES__MEATS__CLEANING__DAIRY.597edbc74f)
+[0m13:06:06.972859 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_CAUSAL_DEMAND_DB_ANALYTICS, now test.dbt_demand.not_null_my_first_dbt_model_id.5fb22c2710)
+[0m13:06:06.973208 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly list_CAUSAL_DEMAND_DB_ANALYTICS_MARTS, now test.dbt_demand.not_null_my_second_dbt_model_id.151b76d778)
+[0m13:06:06.973620 [debug] [Thread-5 (]: Acquiring new snowflake connection 'test.dbt_demand.not_null_stg_forecast_outputs_actual_sales.2274dd1c4f'
+[0m13:06:06.973940 [debug] [Thread-2 (]: Began compiling node test.dbt_demand.accepted_values_stg_weekly_sales_family__GROCERY_I__BEVERAGES__MEATS__CLEANING__DAIRY.597edbc74f
+[0m13:06:06.974209 [debug] [Thread-3 (]: Began compiling node test.dbt_demand.not_null_my_first_dbt_model_id.5fb22c2710
+[0m13:06:06.974459 [debug] [Thread-4 (]: Began compiling node test.dbt_demand.not_null_my_second_dbt_model_id.151b76d778
+[0m13:06:06.974707 [debug] [Thread-5 (]: Began compiling node test.dbt_demand.not_null_stg_forecast_outputs_actual_sales.2274dd1c4f
+[0m13:06:06.983110 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_demand.accepted_values_stg_weekly_sales_family__GROCERY_I__BEVERAGES__MEATS__CLEANING__DAIRY.597edbc74f"
+[0m13:06:06.988389 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_demand.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m13:06:06.990727 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_demand.not_null_my_second_dbt_model_id.151b76d778"
+[0m13:06:06.993123 [debug] [Thread-5 (]: Writing injected SQL for node "test.dbt_demand.not_null_stg_forecast_outputs_actual_sales.2274dd1c4f"
+[0m13:06:06.993915 [debug] [Thread-5 (]: Began executing node test.dbt_demand.not_null_stg_forecast_outputs_actual_sales.2274dd1c4f
+[0m13:06:06.994169 [debug] [Thread-2 (]: Began executing node test.dbt_demand.accepted_values_stg_weekly_sales_family__GROCERY_I__BEVERAGES__MEATS__CLEANING__DAIRY.597edbc74f
+[0m13:06:06.999454 [debug] [Thread-3 (]: Began executing node test.dbt_demand.not_null_my_first_dbt_model_id.5fb22c2710
+[0m13:06:07.004669 [debug] [Thread-5 (]: Writing runtime sql for node "test.dbt_demand.not_null_stg_forecast_outputs_actual_sales.2274dd1c4f"
+[0m13:06:07.006116 [debug] [Thread-2 (]: Writing runtime sql for node "test.dbt_demand.accepted_values_stg_weekly_sales_family__GROCERY_I__BEVERAGES__MEATS__CLEANING__DAIRY.597edbc74f"
+[0m13:06:07.006319 [debug] [Thread-4 (]: Began executing node test.dbt_demand.not_null_my_second_dbt_model_id.151b76d778
+[0m13:06:07.008567 [debug] [Thread-3 (]: Writing runtime sql for node "test.dbt_demand.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m13:06:07.009987 [debug] [Thread-4 (]: Writing runtime sql for node "test.dbt_demand.not_null_my_second_dbt_model_id.151b76d778"
+[0m13:06:07.010557 [debug] [Thread-2 (]: Using snowflake connection "test.dbt_demand.accepted_values_stg_weekly_sales_family__GROCERY_I__BEVERAGES__MEATS__CLEANING__DAIRY.597edbc74f"
+[0m13:06:07.010897 [debug] [Thread-5 (]: Using snowflake connection "test.dbt_demand.not_null_stg_forecast_outputs_actual_sales.2274dd1c4f"
+[0m13:06:07.011082 [debug] [Thread-2 (]: On test.dbt_demand.accepted_values_stg_weekly_sales_family__GROCERY_I__BEVERAGES__MEATS__CLEANING__DAIRY.597edbc74f: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        family as value_field,
+        count(*) as n_records
+
+    from CAUSAL_DEMAND_DB.ANALYTICS_STAGING.stg_weekly_sales
+    group by family
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'GROCERY I','BEVERAGES','MEATS','CLEANING','DAIRY'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "node_id": "test.dbt_demand.accepted_values_stg_weekly_sales_family__GROCERY_I__BEVERAGES__MEATS__CLEANING__DAIRY.597edbc74f"} */
+[0m13:06:07.011277 [debug] [Thread-5 (]: On test.dbt_demand.not_null_stg_forecast_outputs_actual_sales.2274dd1c4f: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select actual_sales
+from CAUSAL_DEMAND_DB.ANALYTICS_STAGING.stg_forecast_outputs
+where actual_sales is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "node_id": "test.dbt_demand.not_null_stg_forecast_outputs_actual_sales.2274dd1c4f"} */
+[0m13:06:07.011620 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m13:06:07.011926 [debug] [Thread-3 (]: Using snowflake connection "test.dbt_demand.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m13:06:07.012628 [debug] [Thread-4 (]: Using snowflake connection "test.dbt_demand.not_null_my_second_dbt_model_id.151b76d778"
+[0m13:06:07.012800 [debug] [Thread-3 (]: On test.dbt_demand.not_null_my_first_dbt_model_id.5fb22c2710: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select id
+from CAUSAL_DEMAND_DB.ANALYTICS.my_first_dbt_model
+where id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "node_id": "test.dbt_demand.not_null_my_first_dbt_model_id.5fb22c2710"} */
+[0m13:06:07.013257 [debug] [Thread-4 (]: On test.dbt_demand.not_null_my_second_dbt_model_id.151b76d778: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select id
+from CAUSAL_DEMAND_DB.ANALYTICS.my_second_dbt_model
+where id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "node_id": "test.dbt_demand.not_null_my_second_dbt_model_id.151b76d778"} */
+[0m13:06:07.569402 [debug] [Thread-4 (]: Snowflake adapter: Snowflake query id: 01c53f96-0206-1415-000e-5436000b15d6
+[0m13:06:07.570221 [debug] [Thread-4 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'CAUSAL_DEMAND_DB.ANALYTICS.MY_SECOND_DBT_MODEL' does not exist or not authorized.
+[0m13:06:07.570950 [debug] [Thread-3 (]: Snowflake adapter: Snowflake query id: 01c53f96-0206-1415-000e-5436000b15d2
+[0m13:06:07.573026 [debug] [Thread-3 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'CAUSAL_DEMAND_DB.ANALYTICS.MY_FIRST_DBT_MODEL' does not exist or not authorized.
+[0m13:06:07.575852 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.564 seconds
+[0m13:06:07.587348 [info ] [Thread-2 (]: 1 of 13 PASS accepted_values_stg_weekly_sales_family__GROCERY_I__BEVERAGES__MEATS__CLEANING__DAIRY  [[32mPASS[0m in 0.61s]
+[0m13:06:07.588009 [debug] [Thread-2 (]: Finished running node test.dbt_demand.accepted_values_stg_weekly_sales_family__GROCERY_I__BEVERAGES__MEATS__CLEANING__DAIRY.597edbc74f
+[0m13:06:07.588474 [debug] [Thread-2 (]: Began running node test.dbt_demand.not_null_stg_forecast_outputs_forecasted_sales.47f5fc0ec8
+[0m13:06:07.588945 [info ] [Thread-2 (]: 5 of 13 START test not_null_stg_forecast_outputs_forecasted_sales .............. [RUN]
+[0m13:06:07.590215 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.dbt_demand.accepted_values_stg_weekly_sales_family__GROCERY_I__BEVERAGES__MEATS__CLEANING__DAIRY.597edbc74f, now test.dbt_demand.not_null_stg_forecast_outputs_forecasted_sales.47f5fc0ec8)
+[0m13:06:07.590546 [debug] [Thread-2 (]: Began compiling node test.dbt_demand.not_null_stg_forecast_outputs_forecasted_sales.47f5fc0ec8
+[0m13:06:07.594522 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_demand.not_null_stg_forecast_outputs_forecasted_sales.47f5fc0ec8"
+[0m13:06:07.596174 [debug] [Thread-4 (]: Database Error in test not_null_my_second_dbt_model_id (models/example/schema.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'CAUSAL_DEMAND_DB.ANALYTICS.MY_SECOND_DBT_MODEL' does not exist or not authorized.
+  compiled code at target/run/dbt_demand/models/example/schema.yml/not_null_my_second_dbt_model_id.sql
+[0m13:06:07.598387 [debug] [Thread-3 (]: Database Error in test not_null_my_first_dbt_model_id (models/example/schema.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'CAUSAL_DEMAND_DB.ANALYTICS.MY_FIRST_DBT_MODEL' does not exist or not authorized.
+  compiled code at target/run/dbt_demand/models/example/schema.yml/not_null_my_first_dbt_model_id.sql
+[0m13:06:07.596620 [error] [Thread-4 (]: 3 of 13 ERROR not_null_my_second_dbt_model_id .................................. [[31mERROR[0m in 0.62s]
+[0m13:06:07.598723 [error] [Thread-3 (]: 2 of 13 ERROR not_null_my_first_dbt_model_id ................................... [[31mERROR[0m in 0.63s]
+[0m13:06:07.599319 [debug] [Thread-4 (]: Finished running node test.dbt_demand.not_null_my_second_dbt_model_id.151b76d778
+[0m13:06:07.599569 [debug] [Thread-2 (]: Began executing node test.dbt_demand.not_null_stg_forecast_outputs_forecasted_sales.47f5fc0ec8
+[0m13:06:07.599865 [debug] [Thread-3 (]: Finished running node test.dbt_demand.not_null_my_first_dbt_model_id.5fb22c2710
+[0m13:06:07.600099 [debug] [Thread-4 (]: Began running node test.dbt_demand.not_null_stg_forecast_outputs_store_nbr.1b958fe5b3
+[0m13:06:07.600378 [debug] [Thread-8 (]: Marking all children of 'test.dbt_demand.not_null_my_second_dbt_model_id.151b76d778' to be skipped because of status 'error'.  Reason: Database Error in test not_null_my_second_dbt_model_id (models/example/schema.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'CAUSAL_DEMAND_DB.ANALYTICS.MY_SECOND_DBT_MODEL' does not exist or not authorized.
+  compiled code at target/run/dbt_demand/models/example/schema.yml/not_null_my_second_dbt_model_id.sql.
+[0m13:06:07.602204 [debug] [Thread-2 (]: Writing runtime sql for node "test.dbt_demand.not_null_stg_forecast_outputs_forecasted_sales.47f5fc0ec8"
+[0m13:06:07.602435 [debug] [Thread-3 (]: Began running node test.dbt_demand.not_null_stg_forecast_outputs_week.83bd4f6550
+[0m13:06:07.602646 [info ] [Thread-4 (]: 6 of 13 START test not_null_stg_forecast_outputs_store_nbr ..................... [RUN]
+[0m13:06:07.603421 [debug] [Thread-8 (]: Marking all children of 'test.dbt_demand.not_null_my_first_dbt_model_id.5fb22c2710' to be skipped because of status 'error'.  Reason: Database Error in test not_null_my_first_dbt_model_id (models/example/schema.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'CAUSAL_DEMAND_DB.ANALYTICS.MY_FIRST_DBT_MODEL' does not exist or not authorized.
+  compiled code at target/run/dbt_demand/models/example/schema.yml/not_null_my_first_dbt_model_id.sql.
+[0m13:06:07.603724 [info ] [Thread-3 (]: 7 of 13 START test not_null_stg_forecast_outputs_week .......................... [RUN]
+[0m13:06:07.604020 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.dbt_demand.not_null_my_second_dbt_model_id.151b76d778, now test.dbt_demand.not_null_stg_forecast_outputs_store_nbr.1b958fe5b3)
+[0m13:06:07.604327 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.dbt_demand.not_null_my_first_dbt_model_id.5fb22c2710, now test.dbt_demand.not_null_stg_forecast_outputs_week.83bd4f6550)
+[0m13:06:07.604790 [debug] [Thread-2 (]: Using snowflake connection "test.dbt_demand.not_null_stg_forecast_outputs_forecasted_sales.47f5fc0ec8"
+[0m13:06:07.604987 [debug] [Thread-4 (]: Began compiling node test.dbt_demand.not_null_stg_forecast_outputs_store_nbr.1b958fe5b3
+[0m13:06:07.605186 [debug] [Thread-3 (]: Began compiling node test.dbt_demand.not_null_stg_forecast_outputs_week.83bd4f6550
+[0m13:06:07.605410 [debug] [Thread-2 (]: On test.dbt_demand.not_null_stg_forecast_outputs_forecasted_sales.47f5fc0ec8: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select forecasted_sales
+from CAUSAL_DEMAND_DB.ANALYTICS_STAGING.stg_forecast_outputs
+where forecasted_sales is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "node_id": "test.dbt_demand.not_null_stg_forecast_outputs_forecasted_sales.47f5fc0ec8"} */
+[0m13:06:07.607787 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_demand.not_null_stg_forecast_outputs_store_nbr.1b958fe5b3"
+[0m13:06:07.610390 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_demand.not_null_stg_forecast_outputs_week.83bd4f6550"
+[0m13:06:07.611331 [debug] [Thread-3 (]: Began executing node test.dbt_demand.not_null_stg_forecast_outputs_week.83bd4f6550
+[0m13:06:07.611526 [debug] [Thread-4 (]: Began executing node test.dbt_demand.not_null_stg_forecast_outputs_store_nbr.1b958fe5b3
+[0m13:06:07.613160 [debug] [Thread-3 (]: Writing runtime sql for node "test.dbt_demand.not_null_stg_forecast_outputs_week.83bd4f6550"
+[0m13:06:07.614561 [debug] [Thread-4 (]: Writing runtime sql for node "test.dbt_demand.not_null_stg_forecast_outputs_store_nbr.1b958fe5b3"
+[0m13:06:07.615203 [debug] [Thread-3 (]: Using snowflake connection "test.dbt_demand.not_null_stg_forecast_outputs_week.83bd4f6550"
+[0m13:06:07.615402 [debug] [Thread-3 (]: On test.dbt_demand.not_null_stg_forecast_outputs_week.83bd4f6550: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select week
+from CAUSAL_DEMAND_DB.ANALYTICS_STAGING.stg_forecast_outputs
+where week is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "node_id": "test.dbt_demand.not_null_stg_forecast_outputs_week.83bd4f6550"} */
+[0m13:06:07.616067 [debug] [Thread-4 (]: Using snowflake connection "test.dbt_demand.not_null_stg_forecast_outputs_store_nbr.1b958fe5b3"
+[0m13:06:07.616389 [debug] [Thread-4 (]: On test.dbt_demand.not_null_stg_forecast_outputs_store_nbr.1b958fe5b3: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select store_nbr
+from CAUSAL_DEMAND_DB.ANALYTICS_STAGING.stg_forecast_outputs
+where store_nbr is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "node_id": "test.dbt_demand.not_null_stg_forecast_outputs_store_nbr.1b958fe5b3"} */
+[0m13:06:07.897862 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.281 seconds
+[0m13:06:07.901812 [info ] [Thread-4 (]: 6 of 13 PASS not_null_stg_forecast_outputs_store_nbr ........................... [[32mPASS[0m in 0.30s]
+[0m13:06:07.902718 [debug] [Thread-4 (]: Finished running node test.dbt_demand.not_null_stg_forecast_outputs_store_nbr.1b958fe5b3
+[0m13:06:07.903281 [debug] [Thread-4 (]: Began running node test.dbt_demand.not_null_stg_weekly_sales_family.62f1619936
+[0m13:06:07.903828 [info ] [Thread-4 (]: 8 of 13 START test not_null_stg_weekly_sales_family ............................ [RUN]
+[0m13:06:07.904495 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.dbt_demand.not_null_stg_forecast_outputs_store_nbr.1b958fe5b3, now test.dbt_demand.not_null_stg_weekly_sales_family.62f1619936)
+[0m13:06:07.904990 [debug] [Thread-4 (]: Began compiling node test.dbt_demand.not_null_stg_weekly_sales_family.62f1619936
+[0m13:06:07.913296 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_demand.not_null_stg_weekly_sales_family.62f1619936"
+[0m13:06:07.914522 [debug] [Thread-4 (]: Began executing node test.dbt_demand.not_null_stg_weekly_sales_family.62f1619936
+[0m13:06:07.917593 [debug] [Thread-4 (]: Writing runtime sql for node "test.dbt_demand.not_null_stg_weekly_sales_family.62f1619936"
+[0m13:06:07.918591 [debug] [Thread-4 (]: Using snowflake connection "test.dbt_demand.not_null_stg_weekly_sales_family.62f1619936"
+[0m13:06:07.918925 [debug] [Thread-4 (]: On test.dbt_demand.not_null_stg_weekly_sales_family.62f1619936: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select family
+from CAUSAL_DEMAND_DB.ANALYTICS_STAGING.stg_weekly_sales
+where family is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "node_id": "test.dbt_demand.not_null_stg_weekly_sales_family.62f1619936"} */
+[0m13:06:08.101001 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.490 seconds
+[0m13:06:08.104589 [info ] [Thread-2 (]: 5 of 13 PASS not_null_stg_forecast_outputs_forecasted_sales .................... [[32mPASS[0m in 0.51s]
+[0m13:06:08.105358 [debug] [Thread-2 (]: Finished running node test.dbt_demand.not_null_stg_forecast_outputs_forecasted_sales.47f5fc0ec8
+[0m13:06:08.105951 [debug] [Thread-2 (]: Began running node test.dbt_demand.not_null_stg_weekly_sales_sales.47dcdc7d5c
+[0m13:06:08.106555 [info ] [Thread-2 (]: 9 of 13 START test not_null_stg_weekly_sales_sales ............................. [RUN]
+[0m13:06:08.107153 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.dbt_demand.not_null_stg_forecast_outputs_forecasted_sales.47f5fc0ec8, now test.dbt_demand.not_null_stg_weekly_sales_sales.47dcdc7d5c)
+[0m13:06:08.107566 [debug] [Thread-2 (]: Began compiling node test.dbt_demand.not_null_stg_weekly_sales_sales.47dcdc7d5c
+[0m13:06:08.112733 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_demand.not_null_stg_weekly_sales_sales.47dcdc7d5c"
+[0m13:06:08.113747 [debug] [Thread-2 (]: Began executing node test.dbt_demand.not_null_stg_weekly_sales_sales.47dcdc7d5c
+[0m13:06:08.116247 [debug] [Thread-2 (]: Writing runtime sql for node "test.dbt_demand.not_null_stg_weekly_sales_sales.47dcdc7d5c"
+[0m13:06:08.117092 [debug] [Thread-2 (]: Using snowflake connection "test.dbt_demand.not_null_stg_weekly_sales_sales.47dcdc7d5c"
+[0m13:06:08.117378 [debug] [Thread-2 (]: On test.dbt_demand.not_null_stg_weekly_sales_sales.47dcdc7d5c: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select sales
+from CAUSAL_DEMAND_DB.ANALYTICS_STAGING.stg_weekly_sales
+where sales is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "node_id": "test.dbt_demand.not_null_stg_weekly_sales_sales.47dcdc7d5c"} */
+[0m13:06:08.161100 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 1.149 seconds
+[0m13:06:08.163527 [info ] [Thread-5 (]: 4 of 13 PASS not_null_stg_forecast_outputs_actual_sales ........................ [[32mPASS[0m in 1.19s]
+[0m13:06:08.164077 [debug] [Thread-5 (]: Finished running node test.dbt_demand.not_null_stg_forecast_outputs_actual_sales.2274dd1c4f
+[0m13:06:08.164433 [debug] [Thread-5 (]: Began running node test.dbt_demand.not_null_stg_weekly_sales_store_nbr.ee77b3c5d0
+[0m13:06:08.164818 [info ] [Thread-5 (]: 10 of 13 START test not_null_stg_weekly_sales_store_nbr ........................ [RUN]
+[0m13:06:08.165246 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.dbt_demand.not_null_stg_forecast_outputs_actual_sales.2274dd1c4f, now test.dbt_demand.not_null_stg_weekly_sales_store_nbr.ee77b3c5d0)
+[0m13:06:08.165579 [debug] [Thread-5 (]: Began compiling node test.dbt_demand.not_null_stg_weekly_sales_store_nbr.ee77b3c5d0
+[0m13:06:08.169491 [debug] [Thread-5 (]: Writing injected SQL for node "test.dbt_demand.not_null_stg_weekly_sales_store_nbr.ee77b3c5d0"
+[0m13:06:08.170170 [debug] [Thread-5 (]: Began executing node test.dbt_demand.not_null_stg_weekly_sales_store_nbr.ee77b3c5d0
+[0m13:06:08.172553 [debug] [Thread-5 (]: Writing runtime sql for node "test.dbt_demand.not_null_stg_weekly_sales_store_nbr.ee77b3c5d0"
+[0m13:06:08.173443 [debug] [Thread-5 (]: Using snowflake connection "test.dbt_demand.not_null_stg_weekly_sales_store_nbr.ee77b3c5d0"
+[0m13:06:08.173730 [debug] [Thread-5 (]: On test.dbt_demand.not_null_stg_weekly_sales_store_nbr.ee77b3c5d0: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select store_nbr
+from CAUSAL_DEMAND_DB.ANALYTICS_STAGING.stg_weekly_sales
+where store_nbr is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "node_id": "test.dbt_demand.not_null_stg_weekly_sales_store_nbr.ee77b3c5d0"} */
+[0m13:06:08.196971 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.278 seconds
+[0m13:06:08.199196 [info ] [Thread-4 (]: 8 of 13 PASS not_null_stg_weekly_sales_family .................................. [[32mPASS[0m in 0.29s]
+[0m13:06:08.199717 [debug] [Thread-4 (]: Finished running node test.dbt_demand.not_null_stg_weekly_sales_family.62f1619936
+[0m13:06:08.200025 [debug] [Thread-4 (]: Began running node test.dbt_demand.not_null_stg_weekly_sales_week.557bbc9bee
+[0m13:06:08.200349 [info ] [Thread-4 (]: 11 of 13 START test not_null_stg_weekly_sales_week ............................. [RUN]
+[0m13:06:08.200688 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.dbt_demand.not_null_stg_weekly_sales_family.62f1619936, now test.dbt_demand.not_null_stg_weekly_sales_week.557bbc9bee)
+[0m13:06:08.200924 [debug] [Thread-4 (]: Began compiling node test.dbt_demand.not_null_stg_weekly_sales_week.557bbc9bee
+[0m13:06:08.204655 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_demand.not_null_stg_weekly_sales_week.557bbc9bee"
+[0m13:06:08.205393 [debug] [Thread-4 (]: Began executing node test.dbt_demand.not_null_stg_weekly_sales_week.557bbc9bee
+[0m13:06:08.207323 [debug] [Thread-4 (]: Writing runtime sql for node "test.dbt_demand.not_null_stg_weekly_sales_week.557bbc9bee"
+[0m13:06:08.208051 [debug] [Thread-4 (]: Using snowflake connection "test.dbt_demand.not_null_stg_weekly_sales_week.557bbc9bee"
+[0m13:06:08.208265 [debug] [Thread-4 (]: On test.dbt_demand.not_null_stg_weekly_sales_week.557bbc9bee: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select week
+from CAUSAL_DEMAND_DB.ANALYTICS_STAGING.stg_weekly_sales
+where week is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "node_id": "test.dbt_demand.not_null_stg_weekly_sales_week.557bbc9bee"} */
+[0m13:06:08.432261 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.223 seconds
+[0m13:06:08.436825 [info ] [Thread-4 (]: 11 of 13 PASS not_null_stg_weekly_sales_week ................................... [[32mPASS[0m in 0.24s]
+[0m13:06:08.437514 [debug] [Thread-4 (]: Finished running node test.dbt_demand.not_null_stg_weekly_sales_week.557bbc9bee
+[0m13:06:08.437931 [debug] [Thread-4 (]: Began running node test.dbt_demand.unique_my_first_dbt_model_id.16e066b321
+[0m13:06:08.438392 [info ] [Thread-4 (]: 12 of 13 START test unique_my_first_dbt_model_id ............................... [RUN]
+[0m13:06:08.438904 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.dbt_demand.not_null_stg_weekly_sales_week.557bbc9bee, now test.dbt_demand.unique_my_first_dbt_model_id.16e066b321)
+[0m13:06:08.439276 [debug] [Thread-4 (]: Began compiling node test.dbt_demand.unique_my_first_dbt_model_id.16e066b321
+[0m13:06:08.447784 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_demand.unique_my_first_dbt_model_id.16e066b321"
+[0m13:06:08.448793 [debug] [Thread-4 (]: Began executing node test.dbt_demand.unique_my_first_dbt_model_id.16e066b321
+[0m13:06:08.450958 [debug] [Thread-4 (]: Writing runtime sql for node "test.dbt_demand.unique_my_first_dbt_model_id.16e066b321"
+[0m13:06:08.451789 [debug] [Thread-4 (]: Using snowflake connection "test.dbt_demand.unique_my_first_dbt_model_id.16e066b321"
+[0m13:06:08.452033 [debug] [Thread-4 (]: On test.dbt_demand.unique_my_first_dbt_model_id.16e066b321: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from CAUSAL_DEMAND_DB.ANALYTICS.my_first_dbt_model
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "node_id": "test.dbt_demand.unique_my_first_dbt_model_id.16e066b321"} */
+[0m13:06:08.621073 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.503 seconds
+[0m13:06:08.622341 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.448 seconds
+[0m13:06:08.625728 [info ] [Thread-2 (]: 9 of 13 PASS not_null_stg_weekly_sales_sales ................................... [[32mPASS[0m in 0.52s]
+[0m13:06:08.628231 [info ] [Thread-5 (]: 10 of 13 PASS not_null_stg_weekly_sales_store_nbr .............................. [[32mPASS[0m in 0.46s]
+[0m13:06:08.629083 [debug] [Thread-2 (]: Finished running node test.dbt_demand.not_null_stg_weekly_sales_sales.47dcdc7d5c
+[0m13:06:08.629695 [debug] [Thread-5 (]: Finished running node test.dbt_demand.not_null_stg_weekly_sales_store_nbr.ee77b3c5d0
+[0m13:06:08.630197 [debug] [Thread-2 (]: Began running node test.dbt_demand.unique_my_second_dbt_model_id.57a0f8c493
+[0m13:06:08.630857 [info ] [Thread-2 (]: 13 of 13 START test unique_my_second_dbt_model_id .............................. [RUN]
+[0m13:06:08.631423 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.dbt_demand.not_null_stg_weekly_sales_sales.47dcdc7d5c, now test.dbt_demand.unique_my_second_dbt_model_id.57a0f8c493)
+[0m13:06:08.631994 [debug] [Thread-2 (]: Began compiling node test.dbt_demand.unique_my_second_dbt_model_id.57a0f8c493
+[0m13:06:08.638489 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_demand.unique_my_second_dbt_model_id.57a0f8c493"
+[0m13:06:08.639653 [debug] [Thread-2 (]: Began executing node test.dbt_demand.unique_my_second_dbt_model_id.57a0f8c493
+[0m13:06:08.642421 [debug] [Thread-2 (]: Writing runtime sql for node "test.dbt_demand.unique_my_second_dbt_model_id.57a0f8c493"
+[0m13:06:08.643618 [debug] [Thread-2 (]: Using snowflake connection "test.dbt_demand.unique_my_second_dbt_model_id.57a0f8c493"
+[0m13:06:08.643970 [debug] [Thread-2 (]: On test.dbt_demand.unique_my_second_dbt_model_id.57a0f8c493: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from CAUSAL_DEMAND_DB.ANALYTICS.my_second_dbt_model
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "node_id": "test.dbt_demand.unique_my_second_dbt_model_id.57a0f8c493"} */
+[0m13:06:08.754686 [debug] [Thread-4 (]: Snowflake adapter: Snowflake query id: 01c53f96-0206-142b-000e-5436000af6a2
+[0m13:06:08.755920 [debug] [Thread-4 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'CAUSAL_DEMAND_DB.ANALYTICS.MY_FIRST_DBT_MODEL' does not exist or not authorized.
+[0m13:06:08.761369 [debug] [Thread-4 (]: Database Error in test unique_my_first_dbt_model_id (models/example/schema.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'CAUSAL_DEMAND_DB.ANALYTICS.MY_FIRST_DBT_MODEL' does not exist or not authorized.
+  compiled code at target/run/dbt_demand/models/example/schema.yml/unique_my_first_dbt_model_id.sql
+[0m13:06:08.761997 [error] [Thread-4 (]: 12 of 13 ERROR unique_my_first_dbt_model_id .................................... [[31mERROR[0m in 0.32s]
+[0m13:06:08.762604 [debug] [Thread-4 (]: Finished running node test.dbt_demand.unique_my_first_dbt_model_id.16e066b321
+[0m13:06:08.763248 [debug] [Thread-8 (]: Marking all children of 'test.dbt_demand.unique_my_first_dbt_model_id.16e066b321' to be skipped because of status 'error'.  Reason: Database Error in test unique_my_first_dbt_model_id (models/example/schema.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'CAUSAL_DEMAND_DB.ANALYTICS.MY_FIRST_DBT_MODEL' does not exist or not authorized.
+  compiled code at target/run/dbt_demand/models/example/schema.yml/unique_my_first_dbt_model_id.sql.
+[0m13:06:08.931335 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 1.315 seconds
+[0m13:06:08.934436 [info ] [Thread-3 (]: 7 of 13 PASS not_null_stg_forecast_outputs_week ................................ [[32mPASS[0m in 1.33s]
+[0m13:06:08.935118 [debug] [Thread-3 (]: Finished running node test.dbt_demand.not_null_stg_forecast_outputs_week.83bd4f6550
+[0m13:06:09.011296 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c53f96-0206-1440-000e-5436000b469e
+[0m13:06:09.012241 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'CAUSAL_DEMAND_DB.ANALYTICS.MY_SECOND_DBT_MODEL' does not exist or not authorized.
+[0m13:06:09.016777 [debug] [Thread-2 (]: Database Error in test unique_my_second_dbt_model_id (models/example/schema.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'CAUSAL_DEMAND_DB.ANALYTICS.MY_SECOND_DBT_MODEL' does not exist or not authorized.
+  compiled code at target/run/dbt_demand/models/example/schema.yml/unique_my_second_dbt_model_id.sql
+[0m13:06:09.017414 [error] [Thread-2 (]: 13 of 13 ERROR unique_my_second_dbt_model_id ................................... [[31mERROR[0m in 0.39s]
+[0m13:06:09.018166 [debug] [Thread-2 (]: Finished running node test.dbt_demand.unique_my_second_dbt_model_id.57a0f8c493
+[0m13:06:09.018862 [debug] [Thread-8 (]: Marking all children of 'test.dbt_demand.unique_my_second_dbt_model_id.57a0f8c493' to be skipped because of status 'error'.  Reason: Database Error in test unique_my_second_dbt_model_id (models/example/schema.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'CAUSAL_DEMAND_DB.ANALYTICS.MY_SECOND_DBT_MODEL' does not exist or not authorized.
+  compiled code at target/run/dbt_demand/models/example/schema.yml/unique_my_second_dbt_model_id.sql.
+[0m13:06:09.020879 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:06:09.021287 [debug] [MainThread]: Connection 'test.dbt_demand.unique_my_second_dbt_model_id.57a0f8c493' was left open.
+[0m13:06:09.021662 [debug] [MainThread]: On test.dbt_demand.unique_my_second_dbt_model_id.57a0f8c493: Close
+[0m13:06:09.268318 [debug] [MainThread]: Connection 'test.dbt_demand.not_null_stg_forecast_outputs_week.83bd4f6550' was left open.
+[0m13:06:09.269184 [debug] [MainThread]: On test.dbt_demand.not_null_stg_forecast_outputs_week.83bd4f6550: Close
+[0m13:06:09.635416 [debug] [MainThread]: Connection 'test.dbt_demand.unique_my_first_dbt_model_id.16e066b321' was left open.
+[0m13:06:09.636219 [debug] [MainThread]: On test.dbt_demand.unique_my_first_dbt_model_id.16e066b321: Close
+[0m13:06:09.890201 [debug] [MainThread]: Connection 'test.dbt_demand.not_null_stg_weekly_sales_store_nbr.ee77b3c5d0' was left open.
+[0m13:06:09.891388 [debug] [MainThread]: On test.dbt_demand.not_null_stg_weekly_sales_store_nbr.ee77b3c5d0: Close
+[0m13:06:10.166982 [info ] [MainThread]: 
+[0m13:06:10.168061 [info ] [MainThread]: Finished running 13 data tests in 0 hours 0 minutes and 5.39 seconds (5.39s).
+[0m13:06:10.170942 [debug] [MainThread]: Command end result
+[0m13:06:10.203646 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/simishrivastava/Projects/causal-demand-forecasting/dbt_demand/target/manifest.json
+[0m13:06:10.205139 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/simishrivastava/Projects/causal-demand-forecasting/dbt_demand/target/semantic_manifest.json
+[0m13:06:10.208755 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/simishrivastava/Projects/causal-demand-forecasting/dbt_demand/target/run_results.json
+[0m13:06:10.209021 [info ] [MainThread]: 
+[0m13:06:10.209260 [info ] [MainThread]: [31mCompleted with 4 errors, 0 partial successes, and 0 warnings:[0m
+[0m13:06:10.209549 [info ] [MainThread]: 
+[0m13:06:10.209910 [error] [MainThread]: [31mFailure in test not_null_my_second_dbt_model_id (models/example/schema.yml)[0m
+[0m13:06:10.210128 [error] [MainThread]:   Database Error in test not_null_my_second_dbt_model_id (models/example/schema.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'CAUSAL_DEMAND_DB.ANALYTICS.MY_SECOND_DBT_MODEL' does not exist or not authorized.
+  compiled code at target/run/dbt_demand/models/example/schema.yml/not_null_my_second_dbt_model_id.sql
+[0m13:06:10.210253 [info ] [MainThread]: 
+[0m13:06:10.210393 [info ] [MainThread]:   compiled code at target/compiled/dbt_demand/models/example/schema.yml/not_null_my_second_dbt_model_id.sql
+[0m13:06:10.210518 [info ] [MainThread]: 
+[0m13:06:10.210702 [error] [MainThread]: [31mFailure in test not_null_my_first_dbt_model_id (models/example/schema.yml)[0m
+[0m13:06:10.210882 [error] [MainThread]:   Database Error in test not_null_my_first_dbt_model_id (models/example/schema.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'CAUSAL_DEMAND_DB.ANALYTICS.MY_FIRST_DBT_MODEL' does not exist or not authorized.
+  compiled code at target/run/dbt_demand/models/example/schema.yml/not_null_my_first_dbt_model_id.sql
+[0m13:06:10.211039 [info ] [MainThread]: 
+[0m13:06:10.211186 [info ] [MainThread]:   compiled code at target/compiled/dbt_demand/models/example/schema.yml/not_null_my_first_dbt_model_id.sql
+[0m13:06:10.211287 [info ] [MainThread]: 
+[0m13:06:10.211414 [error] [MainThread]: [31mFailure in test unique_my_first_dbt_model_id (models/example/schema.yml)[0m
+[0m13:06:10.211551 [error] [MainThread]:   Database Error in test unique_my_first_dbt_model_id (models/example/schema.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'CAUSAL_DEMAND_DB.ANALYTICS.MY_FIRST_DBT_MODEL' does not exist or not authorized.
+  compiled code at target/run/dbt_demand/models/example/schema.yml/unique_my_first_dbt_model_id.sql
+[0m13:06:10.211653 [info ] [MainThread]: 
+[0m13:06:10.211791 [info ] [MainThread]:   compiled code at target/compiled/dbt_demand/models/example/schema.yml/unique_my_first_dbt_model_id.sql
+[0m13:06:10.211930 [info ] [MainThread]: 
+[0m13:06:10.212097 [error] [MainThread]: [31mFailure in test unique_my_second_dbt_model_id (models/example/schema.yml)[0m
+[0m13:06:10.212277 [error] [MainThread]:   Database Error in test unique_my_second_dbt_model_id (models/example/schema.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'CAUSAL_DEMAND_DB.ANALYTICS.MY_SECOND_DBT_MODEL' does not exist or not authorized.
+  compiled code at target/run/dbt_demand/models/example/schema.yml/unique_my_second_dbt_model_id.sql
+[0m13:06:10.212420 [info ] [MainThread]: 
+[0m13:06:10.212582 [info ] [MainThread]:   compiled code at target/compiled/dbt_demand/models/example/schema.yml/unique_my_second_dbt_model_id.sql
+[0m13:06:10.212729 [info ] [MainThread]: 
+[0m13:06:10.212902 [info ] [MainThread]: Done. PASS=9 WARN=0 ERROR=4 SKIP=0 NO-OP=0 TOTAL=13
+[0m13:06:10.213222 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m13:06:10.217990 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 6.596898, "process_in_blocks": "0", "process_kernel_time": 0.396958, "process_mem_max_rss": "251674624", "process_out_blocks": "0", "process_user_time": 2.337896}
+[0m13:06:10.218331 [debug] [MainThread]: Command `dbt test` failed at 13:06:10.218273 after 6.60 seconds
+[0m13:06:10.218583 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1072ca870>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f110950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f346420>]}
+[0m13:06:10.218800 [debug] [MainThread]: Flushing usage events
+[0m13:06:10.743551 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:07:13.152221 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108a52e70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1093c92e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1093c8ec0>]}
+
+
+============================== 13:07:13.154736 | 0998ab09-fcbf-4d0f-bf9e-594e74dad8ef ==============================
+[0m13:07:13.154736 [info ] [MainThread]: Running with dbt=1.11.11
+[0m13:07:13.155007 [debug] [MainThread]: running dbt with arguments {'use_experimental_parser': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': '/Users/simishrivastava/Projects/causal-demand-forecasting/dbt_demand/logs', 'send_anonymous_usage_stats': 'True', 'profiles_dir': '/Users/simishrivastava/.dbt', 'fail_fast': 'False', 'no_print': 'None', 'log_format': 'default', 'write_json': 'True', 'static_parser': 'True', 'use_colors': 'True', 'target_path': 'None', 'cache_selected_only': 'False', 'indirect_selection': 'eager', 'partial_parse': 'True', 'warn_error': 'None', 'debug': 'False', 'empty': 'None', 'invocation_command': 'dbt test --select staging', 'printer_width': '80', 'version_check': 'True'}
+[0m13:07:13.813266 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m13:07:13.813512 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m13:07:13.813647 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m13:07:13.908101 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0998ab09-fcbf-4d0f-bf9e-594e74dad8ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fce5d60>]}
+[0m13:07:13.931186 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0998ab09-fcbf-4d0f-bf9e-594e74dad8ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1089b7d40>]}
+[0m13:07:13.931714 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m13:07:13.999492 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m13:07:14.062966 [debug] [MainThread]: Partial parsing enabled: 3 files deleted, 0 files added, 0 files changed.
+[0m13:07:14.063270 [debug] [MainThread]: Partial parsing: deleted file: dbt_demand://models/example/my_second_dbt_model.sql
+[0m13:07:14.063403 [debug] [MainThread]: Partial parsing: deleted file: dbt_demand://models/example/my_first_dbt_model.sql
+[0m13:07:14.147418 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0998ab09-fcbf-4d0f-bf9e-594e74dad8ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11a1fc050>]}
+[0m13:07:14.186871 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/simishrivastava/Projects/causal-demand-forecasting/dbt_demand/target/manifest.json
+[0m13:07:14.188425 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/simishrivastava/Projects/causal-demand-forecasting/dbt_demand/target/semantic_manifest.json
+[0m13:07:14.198877 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0998ab09-fcbf-4d0f-bf9e-594e74dad8ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105fb2780>]}
+[0m13:07:14.199093 [info ] [MainThread]: Found 4 models, 9 data tests, 5 sources, 536 macros
+[0m13:07:14.199236 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0998ab09-fcbf-4d0f-bf9e-594e74dad8ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11a9b5eb0>]}
+[0m13:07:14.200005 [info ] [MainThread]: 
+[0m13:07:14.200152 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:07:14.200259 [info ] [MainThread]: 
+[0m13:07:14.200455 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m13:07:14.202214 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_CAUSAL_DEMAND_DB_ANALYTICS_MARTS'
+[0m13:07:14.202486 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_CAUSAL_DEMAND_DB_ANALYTICS_STAGING'
+[0m13:07:14.236544 [debug] [ThreadPool]: Using snowflake connection "list_CAUSAL_DEMAND_DB_ANALYTICS_MARTS"
+[0m13:07:14.236801 [debug] [ThreadPool]: Using snowflake connection "list_CAUSAL_DEMAND_DB_ANALYTICS_STAGING"
+[0m13:07:14.236948 [debug] [ThreadPool]: On list_CAUSAL_DEMAND_DB_ANALYTICS_MARTS: show objects in CAUSAL_DEMAND_DB.ANALYTICS_MARTS
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "connection_name": "list_CAUSAL_DEMAND_DB_ANALYTICS_MARTS"} */;
+[0m13:07:14.237081 [debug] [ThreadPool]: On list_CAUSAL_DEMAND_DB_ANALYTICS_STAGING: show objects in CAUSAL_DEMAND_DB.ANALYTICS_STAGING
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "connection_name": "list_CAUSAL_DEMAND_DB_ANALYTICS_STAGING"} */;
+[0m13:07:14.237203 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:07:14.237306 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:07:15.499932 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 1.263 seconds
+[0m13:07:15.733610 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 1.496 seconds
+[0m13:07:15.736132 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0998ab09-fcbf-4d0f-bf9e-594e74dad8ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11a81c8c0>]}
+[0m13:07:15.739072 [debug] [Thread-2 (]: Began running node test.dbt_demand.accepted_values_stg_weekly_sales_family__GROCERY_I__BEVERAGES__MEATS__CLEANING__DAIRY.597edbc74f
+[0m13:07:15.739448 [debug] [Thread-3 (]: Began running node test.dbt_demand.not_null_stg_forecast_outputs_actual_sales.2274dd1c4f
+[0m13:07:15.739780 [debug] [Thread-4 (]: Began running node test.dbt_demand.not_null_stg_forecast_outputs_forecasted_sales.47f5fc0ec8
+[0m13:07:15.740325 [debug] [Thread-5 (]: Began running node test.dbt_demand.not_null_stg_forecast_outputs_store_nbr.1b958fe5b3
+[0m13:07:15.740081 [info ] [Thread-2 (]: 1 of 9 START test accepted_values_stg_weekly_sales_family__GROCERY_I__BEVERAGES__MEATS__CLEANING__DAIRY  [RUN]
+[0m13:07:15.740686 [info ] [Thread-3 (]: 2 of 9 START test not_null_stg_forecast_outputs_actual_sales ................... [RUN]
+[0m13:07:15.741020 [info ] [Thread-4 (]: 3 of 9 START test not_null_stg_forecast_outputs_forecasted_sales ............... [RUN]
+[0m13:07:15.741314 [info ] [Thread-5 (]: 4 of 9 START test not_null_stg_forecast_outputs_store_nbr ...................... [RUN]
+[0m13:07:15.741646 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_CAUSAL_DEMAND_DB_ANALYTICS_MARTS, now test.dbt_demand.accepted_values_stg_weekly_sales_family__GROCERY_I__BEVERAGES__MEATS__CLEANING__DAIRY.597edbc74f)
+[0m13:07:15.741967 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_CAUSAL_DEMAND_DB_ANALYTICS_STAGING, now test.dbt_demand.not_null_stg_forecast_outputs_actual_sales.2274dd1c4f)
+[0m13:07:15.742312 [debug] [Thread-4 (]: Acquiring new snowflake connection 'test.dbt_demand.not_null_stg_forecast_outputs_forecasted_sales.47f5fc0ec8'
+[0m13:07:15.742626 [debug] [Thread-5 (]: Acquiring new snowflake connection 'test.dbt_demand.not_null_stg_forecast_outputs_store_nbr.1b958fe5b3'
+[0m13:07:15.742863 [debug] [Thread-2 (]: Began compiling node test.dbt_demand.accepted_values_stg_weekly_sales_family__GROCERY_I__BEVERAGES__MEATS__CLEANING__DAIRY.597edbc74f
+[0m13:07:15.743104 [debug] [Thread-3 (]: Began compiling node test.dbt_demand.not_null_stg_forecast_outputs_actual_sales.2274dd1c4f
+[0m13:07:15.743328 [debug] [Thread-4 (]: Began compiling node test.dbt_demand.not_null_stg_forecast_outputs_forecasted_sales.47f5fc0ec8
+[0m13:07:15.743541 [debug] [Thread-5 (]: Began compiling node test.dbt_demand.not_null_stg_forecast_outputs_store_nbr.1b958fe5b3
+[0m13:07:15.761105 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_demand.not_null_stg_forecast_outputs_actual_sales.2274dd1c4f"
+[0m13:07:15.761346 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_demand.accepted_values_stg_weekly_sales_family__GROCERY_I__BEVERAGES__MEATS__CLEANING__DAIRY.597edbc74f"
+[0m13:07:15.763476 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_demand.not_null_stg_forecast_outputs_forecasted_sales.47f5fc0ec8"
+[0m13:07:15.765027 [debug] [Thread-5 (]: Writing injected SQL for node "test.dbt_demand.not_null_stg_forecast_outputs_store_nbr.1b958fe5b3"
+[0m13:07:15.766021 [debug] [Thread-3 (]: Began executing node test.dbt_demand.not_null_stg_forecast_outputs_actual_sales.2274dd1c4f
+[0m13:07:15.766199 [debug] [Thread-4 (]: Began executing node test.dbt_demand.not_null_stg_forecast_outputs_forecasted_sales.47f5fc0ec8
+[0m13:07:15.766369 [debug] [Thread-2 (]: Began executing node test.dbt_demand.accepted_values_stg_weekly_sales_family__GROCERY_I__BEVERAGES__MEATS__CLEANING__DAIRY.597edbc74f
+[0m13:07:15.766502 [debug] [Thread-5 (]: Began executing node test.dbt_demand.not_null_stg_forecast_outputs_store_nbr.1b958fe5b3
+[0m13:07:15.776838 [debug] [Thread-3 (]: Writing runtime sql for node "test.dbt_demand.not_null_stg_forecast_outputs_actual_sales.2274dd1c4f"
+[0m13:07:15.778210 [debug] [Thread-4 (]: Writing runtime sql for node "test.dbt_demand.not_null_stg_forecast_outputs_forecasted_sales.47f5fc0ec8"
+[0m13:07:15.779425 [debug] [Thread-2 (]: Writing runtime sql for node "test.dbt_demand.accepted_values_stg_weekly_sales_family__GROCERY_I__BEVERAGES__MEATS__CLEANING__DAIRY.597edbc74f"
+[0m13:07:15.781225 [debug] [Thread-5 (]: Writing runtime sql for node "test.dbt_demand.not_null_stg_forecast_outputs_store_nbr.1b958fe5b3"
+[0m13:07:15.782080 [debug] [Thread-2 (]: Using snowflake connection "test.dbt_demand.accepted_values_stg_weekly_sales_family__GROCERY_I__BEVERAGES__MEATS__CLEANING__DAIRY.597edbc74f"
+[0m13:07:15.782424 [debug] [Thread-4 (]: Using snowflake connection "test.dbt_demand.not_null_stg_forecast_outputs_forecasted_sales.47f5fc0ec8"
+[0m13:07:15.782726 [debug] [Thread-5 (]: Using snowflake connection "test.dbt_demand.not_null_stg_forecast_outputs_store_nbr.1b958fe5b3"
+[0m13:07:15.783027 [debug] [Thread-3 (]: Using snowflake connection "test.dbt_demand.not_null_stg_forecast_outputs_actual_sales.2274dd1c4f"
+[0m13:07:15.783202 [debug] [Thread-2 (]: On test.dbt_demand.accepted_values_stg_weekly_sales_family__GROCERY_I__BEVERAGES__MEATS__CLEANING__DAIRY.597edbc74f: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        family as value_field,
+        count(*) as n_records
+
+    from CAUSAL_DEMAND_DB.ANALYTICS_STAGING.stg_weekly_sales
+    group by family
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'GROCERY I','BEVERAGES','MEATS','CLEANING','DAIRY'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "node_id": "test.dbt_demand.accepted_values_stg_weekly_sales_family__GROCERY_I__BEVERAGES__MEATS__CLEANING__DAIRY.597edbc74f"} */
+[0m13:07:15.783383 [debug] [Thread-4 (]: On test.dbt_demand.not_null_stg_forecast_outputs_forecasted_sales.47f5fc0ec8: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select forecasted_sales
+from CAUSAL_DEMAND_DB.ANALYTICS_STAGING.stg_forecast_outputs
+where forecasted_sales is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "node_id": "test.dbt_demand.not_null_stg_forecast_outputs_forecasted_sales.47f5fc0ec8"} */
+[0m13:07:15.783546 [debug] [Thread-5 (]: On test.dbt_demand.not_null_stg_forecast_outputs_store_nbr.1b958fe5b3: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select store_nbr
+from CAUSAL_DEMAND_DB.ANALYTICS_STAGING.stg_forecast_outputs
+where store_nbr is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "node_id": "test.dbt_demand.not_null_stg_forecast_outputs_store_nbr.1b958fe5b3"} */
+[0m13:07:15.783708 [debug] [Thread-3 (]: On test.dbt_demand.not_null_stg_forecast_outputs_actual_sales.2274dd1c4f: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select actual_sales
+from CAUSAL_DEMAND_DB.ANALYTICS_STAGING.stg_forecast_outputs
+where actual_sales is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "node_id": "test.dbt_demand.not_null_stg_forecast_outputs_actual_sales.2274dd1c4f"} */
+[0m13:07:15.784018 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m13:07:15.784190 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m13:07:16.059075 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.275 seconds
+[0m13:07:16.067277 [info ] [Thread-3 (]: 2 of 9 PASS not_null_stg_forecast_outputs_actual_sales ......................... [[32mPASS[0m in 0.33s]
+[0m13:07:16.067747 [debug] [Thread-3 (]: Finished running node test.dbt_demand.not_null_stg_forecast_outputs_actual_sales.2274dd1c4f
+[0m13:07:16.068017 [debug] [Thread-3 (]: Began running node test.dbt_demand.not_null_stg_forecast_outputs_week.83bd4f6550
+[0m13:07:16.068325 [info ] [Thread-3 (]: 5 of 9 START test not_null_stg_forecast_outputs_week ........................... [RUN]
+[0m13:07:16.068693 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.dbt_demand.not_null_stg_forecast_outputs_actual_sales.2274dd1c4f, now test.dbt_demand.not_null_stg_forecast_outputs_week.83bd4f6550)
+[0m13:07:16.068944 [debug] [Thread-3 (]: Began compiling node test.dbt_demand.not_null_stg_forecast_outputs_week.83bd4f6550
+[0m13:07:16.071816 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_demand.not_null_stg_forecast_outputs_week.83bd4f6550"
+[0m13:07:16.072301 [debug] [Thread-3 (]: Began executing node test.dbt_demand.not_null_stg_forecast_outputs_week.83bd4f6550
+[0m13:07:16.074023 [debug] [Thread-3 (]: Writing runtime sql for node "test.dbt_demand.not_null_stg_forecast_outputs_week.83bd4f6550"
+[0m13:07:16.074655 [debug] [Thread-3 (]: Using snowflake connection "test.dbt_demand.not_null_stg_forecast_outputs_week.83bd4f6550"
+[0m13:07:16.074881 [debug] [Thread-3 (]: On test.dbt_demand.not_null_stg_forecast_outputs_week.83bd4f6550: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select week
+from CAUSAL_DEMAND_DB.ANALYTICS_STAGING.stg_forecast_outputs
+where week is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "node_id": "test.dbt_demand.not_null_stg_forecast_outputs_week.83bd4f6550"} */
+[0m13:07:16.397543 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.613 seconds
+[0m13:07:16.401704 [info ] [Thread-2 (]: 1 of 9 PASS accepted_values_stg_weekly_sales_family__GROCERY_I__BEVERAGES__MEATS__CLEANING__DAIRY  [[32mPASS[0m in 0.66s]
+[0m13:07:16.402618 [debug] [Thread-2 (]: Finished running node test.dbt_demand.accepted_values_stg_weekly_sales_family__GROCERY_I__BEVERAGES__MEATS__CLEANING__DAIRY.597edbc74f
+[0m13:07:16.403174 [debug] [Thread-2 (]: Began running node test.dbt_demand.not_null_stg_weekly_sales_family.62f1619936
+[0m13:07:16.403747 [info ] [Thread-2 (]: 6 of 9 START test not_null_stg_weekly_sales_family ............................. [RUN]
+[0m13:07:16.404351 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.dbt_demand.accepted_values_stg_weekly_sales_family__GROCERY_I__BEVERAGES__MEATS__CLEANING__DAIRY.597edbc74f, now test.dbt_demand.not_null_stg_weekly_sales_family.62f1619936)
+[0m13:07:16.404776 [debug] [Thread-2 (]: Began compiling node test.dbt_demand.not_null_stg_weekly_sales_family.62f1619936
+[0m13:07:16.410427 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_demand.not_null_stg_weekly_sales_family.62f1619936"
+[0m13:07:16.411410 [debug] [Thread-2 (]: Began executing node test.dbt_demand.not_null_stg_weekly_sales_family.62f1619936
+[0m13:07:16.414538 [debug] [Thread-2 (]: Writing runtime sql for node "test.dbt_demand.not_null_stg_weekly_sales_family.62f1619936"
+[0m13:07:16.415687 [debug] [Thread-2 (]: Using snowflake connection "test.dbt_demand.not_null_stg_weekly_sales_family.62f1619936"
+[0m13:07:16.416012 [debug] [Thread-2 (]: On test.dbt_demand.not_null_stg_weekly_sales_family.62f1619936: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select family
+from CAUSAL_DEMAND_DB.ANALYTICS_STAGING.stg_weekly_sales
+where family is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "node_id": "test.dbt_demand.not_null_stg_weekly_sales_family.62f1619936"} */
+[0m13:07:16.674290 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.258 seconds
+[0m13:07:16.678339 [info ] [Thread-2 (]: 6 of 9 PASS not_null_stg_weekly_sales_family ................................... [[32mPASS[0m in 0.27s]
+[0m13:07:16.679277 [debug] [Thread-2 (]: Finished running node test.dbt_demand.not_null_stg_weekly_sales_family.62f1619936
+[0m13:07:16.679844 [debug] [Thread-2 (]: Began running node test.dbt_demand.not_null_stg_weekly_sales_sales.47dcdc7d5c
+[0m13:07:16.680368 [info ] [Thread-2 (]: 7 of 9 START test not_null_stg_weekly_sales_sales .............................. [RUN]
+[0m13:07:16.680966 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.dbt_demand.not_null_stg_weekly_sales_family.62f1619936, now test.dbt_demand.not_null_stg_weekly_sales_sales.47dcdc7d5c)
+[0m13:07:16.681430 [debug] [Thread-2 (]: Began compiling node test.dbt_demand.not_null_stg_weekly_sales_sales.47dcdc7d5c
+[0m13:07:16.687664 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_demand.not_null_stg_weekly_sales_sales.47dcdc7d5c"
+[0m13:07:16.689590 [debug] [Thread-2 (]: Began executing node test.dbt_demand.not_null_stg_weekly_sales_sales.47dcdc7d5c
+[0m13:07:16.693780 [debug] [Thread-2 (]: Writing runtime sql for node "test.dbt_demand.not_null_stg_weekly_sales_sales.47dcdc7d5c"
+[0m13:07:16.694979 [debug] [Thread-2 (]: Using snowflake connection "test.dbt_demand.not_null_stg_weekly_sales_sales.47dcdc7d5c"
+[0m13:07:16.695325 [debug] [Thread-2 (]: On test.dbt_demand.not_null_stg_weekly_sales_sales.47dcdc7d5c: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select sales
+from CAUSAL_DEMAND_DB.ANALYTICS_STAGING.stg_weekly_sales
+where sales is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "node_id": "test.dbt_demand.not_null_stg_weekly_sales_sales.47dcdc7d5c"} */
+[0m13:07:16.907552 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.212 seconds
+[0m13:07:16.912255 [info ] [Thread-2 (]: 7 of 9 PASS not_null_stg_weekly_sales_sales .................................... [[32mPASS[0m in 0.23s]
+[0m13:07:16.913120 [debug] [Thread-2 (]: Finished running node test.dbt_demand.not_null_stg_weekly_sales_sales.47dcdc7d5c
+[0m13:07:16.913655 [debug] [Thread-2 (]: Began running node test.dbt_demand.not_null_stg_weekly_sales_store_nbr.ee77b3c5d0
+[0m13:07:16.914163 [info ] [Thread-2 (]: 8 of 9 START test not_null_stg_weekly_sales_store_nbr .......................... [RUN]
+[0m13:07:16.914771 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.dbt_demand.not_null_stg_weekly_sales_sales.47dcdc7d5c, now test.dbt_demand.not_null_stg_weekly_sales_store_nbr.ee77b3c5d0)
+[0m13:07:16.915222 [debug] [Thread-2 (]: Began compiling node test.dbt_demand.not_null_stg_weekly_sales_store_nbr.ee77b3c5d0
+[0m13:07:16.920850 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_demand.not_null_stg_weekly_sales_store_nbr.ee77b3c5d0"
+[0m13:07:16.921753 [debug] [Thread-2 (]: Began executing node test.dbt_demand.not_null_stg_weekly_sales_store_nbr.ee77b3c5d0
+[0m13:07:16.926821 [debug] [Thread-2 (]: Writing runtime sql for node "test.dbt_demand.not_null_stg_weekly_sales_store_nbr.ee77b3c5d0"
+[0m13:07:16.927718 [debug] [Thread-2 (]: Using snowflake connection "test.dbt_demand.not_null_stg_weekly_sales_store_nbr.ee77b3c5d0"
+[0m13:07:16.928000 [debug] [Thread-2 (]: On test.dbt_demand.not_null_stg_weekly_sales_store_nbr.ee77b3c5d0: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select store_nbr
+from CAUSAL_DEMAND_DB.ANALYTICS_STAGING.stg_weekly_sales
+where store_nbr is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "node_id": "test.dbt_demand.not_null_stg_weekly_sales_store_nbr.ee77b3c5d0"} */
+[0m13:07:16.965737 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.891 seconds
+[0m13:07:16.971196 [info ] [Thread-3 (]: 5 of 9 PASS not_null_stg_forecast_outputs_week ................................. [[32mPASS[0m in 0.90s]
+[0m13:07:16.971924 [debug] [Thread-3 (]: Finished running node test.dbt_demand.not_null_stg_forecast_outputs_week.83bd4f6550
+[0m13:07:16.972217 [debug] [Thread-3 (]: Began running node test.dbt_demand.not_null_stg_weekly_sales_week.557bbc9bee
+[0m13:07:16.972563 [info ] [Thread-3 (]: 9 of 9 START test not_null_stg_weekly_sales_week ............................... [RUN]
+[0m13:07:16.972933 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.dbt_demand.not_null_stg_forecast_outputs_week.83bd4f6550, now test.dbt_demand.not_null_stg_weekly_sales_week.557bbc9bee)
+[0m13:07:16.973288 [debug] [Thread-3 (]: Began compiling node test.dbt_demand.not_null_stg_weekly_sales_week.557bbc9bee
+[0m13:07:16.976231 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_demand.not_null_stg_weekly_sales_week.557bbc9bee"
+[0m13:07:16.976712 [debug] [Thread-3 (]: Began executing node test.dbt_demand.not_null_stg_weekly_sales_week.557bbc9bee
+[0m13:07:16.978223 [debug] [Thread-3 (]: Writing runtime sql for node "test.dbt_demand.not_null_stg_weekly_sales_week.557bbc9bee"
+[0m13:07:16.978794 [debug] [Thread-3 (]: Using snowflake connection "test.dbt_demand.not_null_stg_weekly_sales_week.557bbc9bee"
+[0m13:07:16.979048 [debug] [Thread-3 (]: On test.dbt_demand.not_null_stg_weekly_sales_week.557bbc9bee: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select week
+from CAUSAL_DEMAND_DB.ANALYTICS_STAGING.stg_weekly_sales
+where week is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_demand", "target_name": "dev", "node_id": "test.dbt_demand.not_null_stg_weekly_sales_week.557bbc9bee"} */
+[0m13:07:17.128520 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.200 seconds
+[0m13:07:17.130796 [info ] [Thread-2 (]: 8 of 9 PASS not_null_stg_weekly_sales_store_nbr ................................ [[32mPASS[0m in 0.22s]
+[0m13:07:17.131380 [debug] [Thread-2 (]: Finished running node test.dbt_demand.not_null_stg_weekly_sales_store_nbr.ee77b3c5d0
+[0m13:07:17.270448 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.291 seconds
+[0m13:07:17.272065 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 1.488 seconds
+[0m13:07:17.275172 [info ] [Thread-3 (]: 9 of 9 PASS not_null_stg_weekly_sales_week ..................................... [[32mPASS[0m in 0.30s]
+[0m13:07:17.277939 [info ] [Thread-4 (]: 3 of 9 PASS not_null_stg_forecast_outputs_forecasted_sales ..................... [[32mPASS[0m in 1.54s]
+[0m13:07:17.278740 [debug] [Thread-3 (]: Finished running node test.dbt_demand.not_null_stg_weekly_sales_week.557bbc9bee
+[0m13:07:17.279403 [debug] [Thread-4 (]: Finished running node test.dbt_demand.not_null_stg_forecast_outputs_forecasted_sales.47f5fc0ec8
+[0m13:07:17.371702 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 1.587 seconds
+[0m13:07:17.375817 [info ] [Thread-5 (]: 4 of 9 PASS not_null_stg_forecast_outputs_store_nbr ............................ [[32mPASS[0m in 1.63s]
+[0m13:07:17.376782 [debug] [Thread-5 (]: Finished running node test.dbt_demand.not_null_stg_forecast_outputs_store_nbr.1b958fe5b3
+[0m13:07:17.379064 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:07:17.379478 [debug] [MainThread]: Connection 'test.dbt_demand.not_null_stg_weekly_sales_store_nbr.ee77b3c5d0' was left open.
+[0m13:07:17.379854 [debug] [MainThread]: On test.dbt_demand.not_null_stg_weekly_sales_store_nbr.ee77b3c5d0: Close
+[0m13:07:17.606793 [debug] [MainThread]: Connection 'test.dbt_demand.not_null_stg_weekly_sales_week.557bbc9bee' was left open.
+[0m13:07:17.607487 [debug] [MainThread]: On test.dbt_demand.not_null_stg_weekly_sales_week.557bbc9bee: Close
+[0m13:07:17.885191 [debug] [MainThread]: Connection 'test.dbt_demand.not_null_stg_forecast_outputs_forecasted_sales.47f5fc0ec8' was left open.
+[0m13:07:17.886092 [debug] [MainThread]: On test.dbt_demand.not_null_stg_forecast_outputs_forecasted_sales.47f5fc0ec8: Close
+[0m13:07:18.130874 [debug] [MainThread]: Connection 'test.dbt_demand.not_null_stg_forecast_outputs_store_nbr.1b958fe5b3' was left open.
+[0m13:07:18.131578 [debug] [MainThread]: On test.dbt_demand.not_null_stg_forecast_outputs_store_nbr.1b958fe5b3: Close
+[0m13:07:18.387803 [info ] [MainThread]: 
+[0m13:07:18.388651 [info ] [MainThread]: Finished running 9 data tests in 0 hours 0 minutes and 4.19 seconds (4.19s).
+[0m13:07:18.390533 [debug] [MainThread]: Command end result
+[0m13:07:18.424364 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/simishrivastava/Projects/causal-demand-forecasting/dbt_demand/target/manifest.json
+[0m13:07:18.425695 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/simishrivastava/Projects/causal-demand-forecasting/dbt_demand/target/semantic_manifest.json
+[0m13:07:18.430076 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/simishrivastava/Projects/causal-demand-forecasting/dbt_demand/target/run_results.json
+[0m13:07:18.430270 [info ] [MainThread]: 
+[0m13:07:18.430476 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:07:18.430640 [info ] [MainThread]: 
+[0m13:07:18.430808 [info ] [MainThread]: Done. PASS=9 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=9
+[0m13:07:18.435100 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 5.3264775, "process_in_blocks": "0", "process_kernel_time": 0.414267, "process_mem_max_rss": "246759424", "process_out_blocks": "0", "process_user_time": 2.333417}
+[0m13:07:18.435352 [debug] [MainThread]: Command `dbt test` succeeded at 13:07:18.435306 after 5.33 seconds
+[0m13:07:18.435549 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1092f9e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1090891f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11a5f9160>]}
+[0m13:07:18.435730 [debug] [MainThread]: Flushing usage events
+[0m13:07:18.897468 [debug] [MainThread]: An error was encountered while trying to flush usage events

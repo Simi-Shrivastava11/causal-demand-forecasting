@@ -1,0 +1,12 @@
+
+venv/
+data/raw/
+__pycache__/
+.DS_Store
+*.pyc
+.env
+src/load_to_snowflake.py
+dbt_demand/target/
+dbt_demand/dbt_packages/
+dbt_demand/logs/
+.streamlit/secrets.toml

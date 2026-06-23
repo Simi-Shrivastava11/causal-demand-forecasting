@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: stg_weekly_sales
+    description: "Cleaned weekly sales data for selected store-family combinations"
+    columns:
+      - name: store_nbr
+        tests:
+          - not_null
+      - name: family
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['GROCERY I', 'BEVERAGES', 'MEATS', 'CLEANING', 'DAIRY']
+      - name: week
+        tests:
+          - not_null
+      - name: sales
+        tests:
+          - not_null
+
+  - name: stg_forecast_outputs
+    description: "LightGBM forecast outputs with error metrics"
+    columns:
+      - name: store_nbr
+        tests:
+          - not_null
+      - name: week
+        tests:
+          - not_null
+      - name: actual_sales
+        tests:
+          - not_null
+      - name: forecasted_sales
+        tests:
+          - not_null

@@ -1,0 +1,20 @@
+project:
+  name: causal-demand-forecasting
+  version: 1.0.0
+
+paths:
+  raw_data: data/raw/
+  processed_data: data/processed/
+  outputs: data/outputs/
+  reports: reports/
+
+modeling:
+  top_n_store_families: 5
+  forecast_horizon_weeks: 4
+  min_training_weeks: 104
+  validation_step_weeks: 4
+
+snowflake:
+  database: CAUSAL_DEMAND_DB
+  schema: ANALYTICS
+  warehouse: COMPUTE_WH

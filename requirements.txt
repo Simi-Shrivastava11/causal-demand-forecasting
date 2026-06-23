@@ -1,0 +1,16 @@
+pandas
+numpy
+scikit-learn
+lightgbm
+prophet
+statsmodels
+causalimpact
+matplotlib
+plotly
+streamlit
+snowflake-connector-python
+snowflake-sqlalchemy
+dbt-snowflake
+jupyter
+pyyaml
+pyarrow

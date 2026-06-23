@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: staging
+    database: CAUSAL_DEMAND_DB
+    schema: STAGING
+    tables:
+      - name: RAW_WEEKLY_SALES
+      - name: RAW_FEATURE_MATRIX
+      - name: RAW_FORECAST_OUTPUTS
+      - name: RAW_MODEL_COMPARISON
+      - name: RAW_CAUSAL_IMPACT
